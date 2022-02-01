@@ -5,7 +5,7 @@
         <input type="text" placeholder="Enter your name">
         <button>Submit</button>
     </body>
-    
+
     <script>
         const getName = document.querySelector('input');
         const btn = document.querySelector('button');
@@ -19,7 +19,7 @@
         });
 
         function greet(name){
-            if(name === ''){
+            if(!name){
                 return 'Hello, my friend.';
             }else if(name === name.toUpperCase()){
                 return 'HELLO, '+name+'.';
