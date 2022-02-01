@@ -1,1 +1,30 @@
-test
+<html>
+    <body>
+        <button> PRESS ME</button>
+    </body>
+</html>
+
+<script>
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    const name = prompt('What is your name?');
+    alert(greet(name));
+});
+
+function greet(name) {
+    const greeting = 'Hello,';
+  
+  if(!name){
+      return(`${greeting} my friend!`);
+  }
+  else if(name === name.toUpperCase()){
+      return(`${greeting.toUpperCase()} ${name.toUpperCase()}!`);
+  }
+  else{
+    return(`${greeting} ${name}!`);
+  }
+}
+
+
+</script>
