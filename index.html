@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>2022/day-one-lkaushik</title>
+    </head>
+    <body>
+    <script>  
+    //greet function
+    function greet(name){
+        if(name == null || name == ''){
+            alert("Hello, my friend.");
+        }
+        else if(name == name.toUpperCase()){
+            alert(`HELLO, ${name.toUpperCase()}.`);
+        }
+        else{
+            alert(`Hello, ${name}.`);
+        }
+    }
+
+    //Input name via prompt
+    var name = window.prompt("Enter your name");
+    //call greet function
+    greet(name);
+    </script>
+    </body>
+</html>
