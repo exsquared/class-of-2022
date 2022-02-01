@@ -5,10 +5,16 @@ submitButton.addEventListener('click', greetUser);
 
 function greetUser() {
     const userName = inputName.value.trim();
-    if (userName == null || userName == '')
-        console.log('Hello my dear friend!');
-    else if (userName.toUpperCase() === userName)
-        console.log('HELLO', userName);
-    else    
-        console.log('Hello', userName);
+    const greetingTxt = greet(userName);
+    const displayGreeting = document.getElementById('displayGreeting').innerHTML = greetingTxt;
+}
+
+
+function greet(name) {
+    if (name == null || name == '')
+        return 'Hello, my friend.';
+    else if (name.toUpperCase() === name)
+        return ('HELLO ' + name + '.');
+    else
+        return ('Hello, ' + name + '.');
 }
