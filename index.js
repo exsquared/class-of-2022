@@ -8,7 +8,7 @@ function greet(name)
     //to check for uppercase condition
     if (name==name.toUpperCase())
     {
-        return `HELLO, ${name.toUpperCase()}.!`;
+        return `HELLO, ${name}.!`;
     }
     return `Hello,${name}.`;
 }
