@@ -1,13 +1,29 @@
-# Day One 
+## Coding Guidelines
+ 
+### Editor
 
-## Requirement 1
+Candidates can choose any editor for development. Some of our favorites are VS Code, XCode (Swift). Please have the editor already installed on your machine before the test.
 
-Write a method `greet(name)` that interpolates `name` in a simple greeting. For example, when `name` is `"Bob"`, the method should return a string `"Hello, Bob."`.
+### Knowledge of GIT
+It is our assumption that you have a basic knowledge of GIT.
 
-## Requirement 2
+## Branch and Commits
 
-Handle nulls by introducing a stand-in. For example, when `name` is null, then the method should return the string `"Hello, my friend."`
+You will find assignment in following branches for each day. Suppose today is your first day, then the branch name will be 2022/day-one. 
+Before developing you need to clone this branch, and check in code in following format
+[Current Year]/[day-<day>][First Letter of FirstName][LastName]
+  
+### Example
+Branch Name for Candidate "Apple Seed", current year 2022, day 1 will be  
+```
+  2022/day-one-aseed
+``` 
+ 
 
-## Requirement 3
+## Tips
+* Use consistent coding standards.
+* Code should be self explanatory.
+* Always ask questions before writing code. Lot of times problem statements are ambigious.
+* It is more important how you solve the problem, as compared to reaching to a solution by hit and trial.
 
-Handle shouting. When `name` is all uppercase, then the method should shout back to the user. For example, when `name` is `"JERRY"` then the method should return the string `"HELLO JERRY!"`
+
