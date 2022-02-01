@@ -2,7 +2,7 @@
  
 ### Editor
 
-Candidates can choose any editor for development. Some of our favorites are VS Code, XCode (Swift). Please have the editor already installed on your machine before the test.
+You can choose any editor for development. Some of our favorites are VS Code, XCode (Swift). Please have the editor already installed on your machine before the test.
 
 ### Knowledge of GIT
 It is our assumption that you have a basic knowledge of GIT.
