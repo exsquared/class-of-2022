@@ -23,10 +23,9 @@ function greet(name){
 //Handling array with more than 2 elements
 function combine(array) {
    
-    let small = "Hello, ", smallAns = "Hello, ";
-    let caps = "HELLO ", capAns = "HELLO ";
-    let smallName=[];
-    let capName=[];
+    let small = "Hello, ", smallAns = "Hello, ", caps = "HELLO ", capAns = "HELLO ";
+    let smallName=[], capName=[];
+
     for(let i=0; i<array.length; i++){    // Separating Normal Greetings and Shouting Greetings
         if(array[i] === array[i].toUpperCase()){ 
             capName.push(array[i]);
@@ -47,11 +46,8 @@ function combine(array) {
         }else if(str.includes(",")){     // Handling Requirement 7
             str = str.substring(0,str.length-1);
         }
-        if(j === smallName.length-1){   // Handling Last Person's Greetings
-            smallAns += "and "+str+".";
-        }else{
-            smallAns += str+", ";    //Handling Intermediate Person's Greetings
-        }
+        // Handling Last Person's Greetings and Intermediate Person's Greetings
+        (j === smallName.length-1)?smallAns += "and "+str+".":smallAns += str+", ";    
     }
     
     for(let j=0; j<capName.length; j++){
@@ -70,11 +66,8 @@ function combine(array) {
             capAns += str+"!";
             break;
         }else{
-            if(j === capName.length-1){   // Handling Last Person's Shouting Greetings
-                capAns += "AND "+str+"!";
-            }else{
-                capAns += str+", ";    //Handling Intermediate Person's Shouting Greetings
-            }
+            // Handling Last Person's Shouting Greetings and Handling Intermediate Person's Shouting Greetings
+            (j === capName.length-1)?capAns += "AND "+str+"!":capAns += str+", ";
         }  
     }
         
@@ -84,6 +77,5 @@ function combine(array) {
         return capAns;
     }else{
         return smallAns + "  AND  " + capAns;   // normal greetings as well as shouting greetings
-    }
-    
+    } 
 }
