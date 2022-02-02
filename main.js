@@ -18,6 +18,8 @@ function generateNames(userNames) {
     let isUpperCase = false;
     let upperCaseIdx = 0;
     for (let i = 0; i < names.length; i++) {
+        if (names[i].endsWith(','))
+            names[i] = names[i].slice(0, -1);
         if (names[i].toString().toUpperCase() === names[i].toString()) {
             isUpperCase = true;
             upperCaseNames.push(names[i]);
