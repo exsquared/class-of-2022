@@ -1,0 +1,123 @@
+<html>
+    <head></head>
+
+    <body>
+        <p>
+            <ul>
+                <li class>
+                    <span>Input: ["Jill", "Jane"]</span>
+                    <span class="req4"></span>
+                </li>
+                <li>
+                    <span>Input: ["Amy", "Brian", "Charlotte"]</span>
+                    <span class="req5"></span>
+                </li>
+                <li>
+                    <span>Input: ["Amy", "BRIAN", "Charlotte"]</span>
+                    <span class="req6"></span>
+                </li>
+                <li>
+                    <span>Input: ["Bob", "Charlie, Dianne"]</span>
+                    <span class="req7"></span>
+                </li>
+                <li>
+                    <span>Input: ["Bob", "\"Charlie, Dianne\""]</span>
+                    <span class="req8"></span>
+                </li>
+            </ul>
+        </p>
+    </body>
+
+    <script>
+
+        function greet(name){
+
+            // Handling empty string or null string.
+            if(!name || name == ''){
+                return "Hello, my friend.";
+            }
+
+            lowercaseNames = [];
+            uppercaseNames = [];
+
+            for(let n of name){
+                if(n.includes(',')){
+
+                    /*
+                    Handling requirements with escape characters, allowing us to
+                    treat such entries as a single entity.
+                    */
+                    if(n.includes('"')){
+                        lowercaseNames.push(n.slice(1, n.length-1));
+                    }else{
+
+                        // Spliting non-escape character strings, treating them as different entries.
+                        const temp = n.split(',');
+                        for(let t of temp){
+                            if(t === t.toUpperCase()){
+                                uppercaseNames.push(t);
+                            }else{
+                                lowercaseNames.push(t);
+                            }
+                        }
+                    }
+                }
+
+                // Separating Capitalized and UPPERCASE names.
+                else if(n === n.toUpperCase()){
+                    uppercaseNames.push(n);
+                }else{
+                    lowercaseNames.push(n);
+                }
+            }
+
+            concatString = '';
+
+            //Handling Capitalized names for a single name, two names and n-names.
+            if(lowercaseNames.length == 1){
+                concatString += "Hello, " + lowercaseNames[0] + ".";
+            }else if(lowercaseNames.length == 2){
+                concatString += "Hello, " + lowercaseNames[0] + " and " + lowercaseNames[1] + ".";
+            }else if (lowercaseNames.length > 2){
+                concatString += "Hello, ";
+                concatString += lowercaseNames.slice(0, lowercaseNames.length-1).join(", ") + ", and " + lowercaseNames[lowercaseNames.length - 1] + ".";
+            }
+
+            //Handling UPPERCASE names for a single name, two names and n-names.
+            if(uppercaseNames.length == 1){
+
+                // Used when no Capitalized name is given.
+                if(concatString.length == 0){
+                    concatString += "HELLO " + uppercaseNames[0] + "!";
+                }else{
+                    concatString += " AND HELLO " + uppercaseNames[0] + "!";
+                }
+            }else if(uppercaseNames.length > 1){
+
+                // Used when no Capitalized name is given.
+                if(concatString.length == 0){
+                    concatString += "HELLO ";
+                }else{
+                    concatString += " AND HELLO ";
+                }
+                concatString += uppercaseNames.slice(0, uppercaseNames.length-1).join(", ") + ", AND " + uppercaseNames[uppercaseNames.length - 1] + "!";
+            }
+
+            return concatString;
+        }
+
+        requirement_4 = document.querySelector('.req4');
+        requirement_5 = document.querySelector('.req5');
+        requirement_6 = document.querySelector('.req6');
+        requirement_7 = document.querySelector('.req7');
+        requirement_8 = document.querySelector('.req8');
+
+        requirement_4.textContent = "|| Output: " + greet(["Jill", "Jane"]);
+        requirement_5.textContent = "|| Output: " + greet(["Amy", "Brian", "Charlotte"]);
+        requirement_6.textContent = "|| Output: " + greet(["Amy", "BRIAN", "Charlotte"]);
+        requirement_7.textContent = "|| Output: " + greet(["Bob", "Charlie, Dianne"]);
+        requirement_8.textContent = "|| Output: " + greet(["Bob", "\"Charlie, Dianne\""]);
+        
+
+    </script>
+</html>
