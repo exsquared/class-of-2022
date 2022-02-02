@@ -1,29 +1,21 @@
-## Coding Guidelines
- 
-### Editor
+# Greeting Continued ....
 
-You can choose any editor for development. Some of our favorites are VS Code, XCode (Swift). Please have the editor already installed on your machine before the test.
+## Requirement 4
 
-### Knowledge of GIT
-It is our assumption that you have a basic knowledge of GIT.
+Handle two names of input. When `name` is an array of two names (or, in languages that support it, varargs or a splat), then both names should be printed. For example, when `name` is `["Jill", "Jane"]`, then the method should return the string `"Hello, Jill and Jane."`
 
-## Branch and Commits
+## Requirement 5
 
-You will find assignment in following branches for each day. Suppose today is your first day, then the branch name will be 2022/day-one. 
-Before developing you need to clone this branch, and check in code in following format
-[Current Year]/[day-<day>][First Letter of FirstName][LastName]
-  
-### Example
-Branch Name for Candidate "Apple Seed", current year 2022, day 1 will be  
-```
-  2022/day-one-aseed
-``` 
- 
+Handle an arbitrary number of names as input. When `name` represents more than two names, separate them with commas and close with an Oxford comma and "and". For example, when `name` is `["Amy", "Brian", "Charlotte"]`, then the method should return the string `"Hello, Amy, Brian, and Charlotte."`
 
-## Tips
-* Use consistent coding standards.
-* Code should be self explanatory.
-* Always ask questions before writing code. Lot of times problem statements are ambigious.
-* It is more important how you solve the problem, as compared to reaching to a solution by hit and trial.
+## Requirement 6
 
+Allow mixing of normal and shouted names by separating the response into two greetings. For example, when `name` is `["Amy", "BRIAN", "Charlotte"]`, then the method should return the string `"Hello, Amy and Charlotte. AND HELLO BRIAN!"`
 
+## Requirement 7
+
+If any entries in `name` are a string containing a comma, split it as its own input. For example, when `name` is `["Bob", "Charlie, Dianne"]`, then the method should return the string `"Hello, Bob, Charlie, and Dianne."`.
+
+## Requirement 8
+
+Allow the input to escape intentional commas introduced by Requirement 7. These can be escaped in the same manner that CSV is, with double quotes surrounding the entry. For example, when `name` is `["Bob", "\"Charlie, Dianne\""]`, then the method should return the string `"Hello, Bob and Charlie, Dianne."`.
