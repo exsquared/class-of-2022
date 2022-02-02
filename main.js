@@ -11,15 +11,34 @@ function greet() {
 }
 
 function generateNames(userNames) {
+
     let names = userNames.split(' ');
     names = names.filter(name => name.trim().length > 0);
     let smallCaseNames = [], upperCaseNames = [];
+
     // Seperating uppercase elements to the end of the array
+    
     let isUpperCase = false;
     let upperCaseIdx = 0;
+    let foundQuotes = false, csvMessage = '';
     for (let i = 0; i < names.length; i++) {
+        if (names[i].startsWith('"')) {
+            foundQuotes = true;
+            csvMessage += names[i].toString().substring(1) + ' ';
+            continue;
+        }
+        else if (names[i].endsWith('"')) {
+            csvMessage += names[i].substring(0, names[i].length - 1) + ' ';
+            smallCaseNames.push(csvMessage);
+            foundQuotes = false;
+            continue;
+        }
+        if (foundQuotes) {
+            csvMessage += names[i] + ' ';
+            continue;
+        }
         if (names[i].endsWith(','))
-            names[i] = names[i].slice(0, -1);
+            names[i] = names[i].toString().slice(0, -1);
         if (names[i].toString().toUpperCase() === names[i].toString()) {
             isUpperCase = true;
             upperCaseNames.push(names[i]);
