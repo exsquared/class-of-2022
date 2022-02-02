@@ -13,9 +13,20 @@ function greet() {
 function generateGreeting(userNames) {
     let names = userNames.split(' ');
     if (names.length == 1) {
-        return 'Hello, ' + names[0] + '.';
+        const name = names[0].toString();
+        if (name.toUpperCase() === name)
+            return `HELLO ${name}.`;
+        else
+            return `Hello ${name}.`;
     }
-    const greetingMessage = `Hello, ${names[0]} and ${names[1]}.`
-    return greetingMessage;
+    else {
+        let greetingMessage = 'Hello, ';
+        for (let i = 0; i < names.length - 2; i++) {
+            greetingMessage += names[i] + ', ';
+        }
+        greetingMessage += names[names.length - 2] + ', and ' + names[names.length - 1] + '.';
+        return greetingMessage;
+    }
 }
+
 
