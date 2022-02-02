@@ -50,7 +50,7 @@ function handleNames(names){
             return str;
         }
         //else we shall handle the lowercase..
-        str = `Hello ${lowercase[0]}!`
+        str = `Hello, ${lowercase[0]}!`
         return str;
     }
     //If there are two names in the array....
@@ -66,7 +66,7 @@ function handleNames(names){
             return str;
         }
         //If there are both kind of the names....
-        str+=`Hello ${lowercase[0]}. AND HELLO ${uppercase[0]}!`;
+        str+=`Hello, ${lowercase[0]}. AND HELLO ${uppercase[0]}!`;
         return str;
     }
     //If there are more than two names....
@@ -102,6 +102,11 @@ function handleNames(names){
     return str;
 }
 
+//Taking Input..
 let input = prompt('Enter Names');
+
+//Collecting Output...
 let output = handleNames(input);
+
+//Printing Output..
 console.log(output);
