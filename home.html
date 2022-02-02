@@ -1,0 +1,98 @@
+<html>
+    <body>
+        <button> PRESS ME</button>
+    </body>
+</html>
+
+<script>
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    const names = prompt('What are your names?');
+   
+          /*    if(names.include('"\"') && names.include('\""')){
+                  let startIndex = names.indexOf('"\"');
+                  let endIndex = names.indexOf('\""');
+                  let extra = names.splice(startIndex,endIndex);
+                  names = names - names.split(startIndex,endIndex);
+                  
+                  let ex = extra.split(',');
+                  let exStr = `${ex[0]} and ${ex[1]}`;
+
+                  alert(greet(names.split(',') + `${exStr}`));
+                  
+                 // console.log(exStr)
+              }*/
+             
+    let myArray = names.split(',');
+    alert(greet(myArray));  
+           
+    
+});
+
+function greet(myArray) {
+    const greeting = 'Hello,';
+    let str1 = `${greeting} `;
+   
+    if(!myArray){
+      return(`${greeting} my friends!`);
+  }
+  
+  else{           
+        
+         let str = '';
+         let capital = '';
+         let strEx = '';
+         let test = [];
+         
+        let k = 0;
+        // let strCap= '';
+        const last = myArray.slice(-1);
+        
+        for (let i=0; i<myArray.length-1; i++){
+            
+         
+            //adding non capital names in
+            if(myArray[i] !== myArray[i].toUpperCase()  && !myArray[i].includes('\'')){
+              if(i!=myArray.length-2 ){
+                str += `${myArray[i]}, `;
+            }
+            else{
+                str +=`${myArray[i]} `;
+            }
+        }
+        //creating an array of caps
+            else if(myArray[i] !== myArray[i].toUpperCase()){
+                capital = `${str1.toUpperCase()} ${myArray[i].toUpperCase()}`;             
+        }
+        //creating an array which would store the excape sequence words
+        else if(myArray[i].includes('\'') ){
+
+               test[k++] =  myArray[i] ;
+        }
+                             
+        }
+        let joined = '';
+        
+      
+       
+       joined =  `${str1} ${str}, ${strEx} `;
+        
+       strEx += `${test[0]} and ${test[1]}`;
+       if(!strEx){
+        if(!capital){
+            joined = `${str1} ${str} and ${last} `;
+        }
+        else{
+            joined = `${str1} ${str} ${last} and ${capital} `;
+       }
+       }
+       else{
+        joined = `${str1} ${str} ${last}  and ${strEx}`;
+       }
+          
+        return(joined);
+    }
+}
+
+</script>
