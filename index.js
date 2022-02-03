@@ -50,7 +50,7 @@ function handleNames(names){
             return str;
         }
         //else we shall handle the lowercase..
-        str = `Hello, ${lowercase[0]}!`
+        str = `Hello, ${lowercase[0]}.`
         return str;
     }
     //If there are two names in the array....
