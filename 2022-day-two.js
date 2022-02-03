@@ -1,4 +1,4 @@
-let InputArray = ["AB","CD","de"];
+let InputArray = ["ack", "JILL","Joe","JOHN","Mark","JADE"];
 //let size = prompt("enter size of the array, it should be greater than two");
 //for(var i=0;i<size;i++){
   // InputArray[i] = prompt("Enter name" + (i+1));
@@ -47,14 +47,14 @@ if(size>2){
      
      }
      else{
-          finalStr = str1 + " and " + str2;
+          finalStr = str1 + " AND " + str2;
          finalStr= finalStr.substring(0,finalStr.length -2);
          
      }
 
     
 }
-else{
+else if(size===2){
     for(var i=0;i<size;i++){
         if(InputArray[i]===InputArray[i].toUpperCase()){
             count2++
@@ -83,6 +83,13 @@ else{
      }
 
 }
+else{
+    
+    if(InputArray[0]==InputArray[0].toUpperCase()){
+           finalStr = str2 + InputArray[0];
+    }
+    else{
+           finalStr = str1 + InputArray[0];
+    }
+}
 console.log(finalStr);
-
-
