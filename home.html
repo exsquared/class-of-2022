@@ -2,35 +2,24 @@
     <head></head>
 
     <body>
-        <p>
-            <ul>
-                <li class>
-                    <span>Input: ["Jill", "Jane"]</span>
-                    <span class="req4"></span>
-                </li>
-                <li>
-                    <span>Input: ["Amy", "Brian", "Charlotte"]</span>
-                    <span class="req5"></span>
-                </li>
-                <li>
-                    <span>Input: ["Amy", "BRIAN", "Charlotte"]</span>
-                    <span class="req6"></span>
-                </li>
-                <li>
-                    <span>Input: ["Bob", "Charlie, Dianne"]</span>
-                    <span class="req7"></span>
-                </li>
-                <li>
-                    <span>Input: ["Bob", "\"Charlie, Dianne\""]</span>
-                    <span class="req8"></span>
-                </li>
-            </ul>
-        </p>
+        <input type="text" placeholder="Entry name">
+        <button>Submit</button>
     </body>
 
     <script>
+        const name = document.querySelector('input');
+        const btn = document.querySelector('button');
 
-        // Returns a greeting upon receiving an array of names.
+        const result = document.createElement('p');
+
+        let names = []
+
+        btn.addEventListener('click', () => {
+            names.push(name.value);
+            result.textContent = greet(names);
+            document.body.append(result);
+        });
+
         function greet(name){
 
             // Handling empty string or null string.
@@ -42,19 +31,21 @@
             uppercaseNames = [];
 
             for(let n of name){
+                n = n.trim();
                 if(n.includes(',')){
-
-                    /*
-                    Handling requirements with escape characters, allowing us to
-                    treat such entries as a single entity.
-                    */
+                    /* Handling entries with a comma. */
                     if(n.includes('"')){
-                        lowercaseNames.push(n.slice(1, n.length-1));
+                        /*
+                        Handling requirements with escape characters, allowing us to
+                        treat such entries as a single entity.
+                        */
+                        lowercaseNames.push(n.slice(2, n.length-2)); // Removes first two and last two characters.
                     }else{
 
                         // Spliting non-escape character strings, treating them as different entries.
-                        const temp = n.split(',');
-                        for(let t of temp){
+                        const splitArray = n.split(',');
+                        
+                        for(let t of splitArray){
                             if(t === t.toUpperCase()){
                                 uppercaseNames.push(t);
                             }else{
@@ -103,23 +94,7 @@
                 }
                 concatString += uppercaseNames.slice(0, uppercaseNames.length-1).join(", ") + ", AND " + uppercaseNames[uppercaseNames.length - 1] + "!";
             }
-
             return concatString;
         }
-
-        // Test Code
-        requirement_4 = document.querySelector('.req4');
-        requirement_5 = document.querySelector('.req5');
-        requirement_6 = document.querySelector('.req6');
-        requirement_7 = document.querySelector('.req7');
-        requirement_8 = document.querySelector('.req8');
-
-        requirement_4.textContent = "|| Output: " + greet(["Jill", "Jane"]);
-        requirement_5.textContent = "|| Output: " + greet(["Amy", "Brian", "Charlotte"]);
-        requirement_6.textContent = "|| Output: " + greet(["Amy", "BRIAN", "Charlotte"]);
-        requirement_7.textContent = "|| Output: " + greet(["Bob", "Charlie, Dianne"]);
-        requirement_8.textContent = "|| Output: " + greet(["Bob", "\"Charlie, Dianne\""]);
-        
-
     </script>
 </html>
