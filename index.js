@@ -1,6 +1,7 @@
 function handleNames(names){
     //It means that the comma is not present in the string...
-    let array = names.split(' ');
+    let newString = names.trim();
+    let array = newString.split(' ');
     let str = '';
     //Array for storing the lowercase words..
     let lowercase = [];
