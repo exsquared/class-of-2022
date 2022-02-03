@@ -28,39 +28,39 @@ function greet(names)
 
     for (let i = 0; i < names.length; i++)    //iterate through the input
     {           
-            if (checkcomma(names[i]))
+        if (checkcomma(names[i]))
+        {
+            let diff = names[i].split(",");
+            for (d of diff)
             {
-                let diff = names[i].split(",");
-                for (d of diff)
-                    {
-                    if (checkupper(d))
-                    {
-                        upper.push(d);
-                    }    
-                    else
-                    {
-                        lower.push(d) ;
-                    }
+                if (checkupper(d))
+                {
+                    upper.push(d.trim());
+                }    
+                else
+                {
+                    lower.push(d.trim()) ;
                 }
+            }
+        }    
+        else
+        {
+            if (checkupper(names[i]))
+            {
+                upper.push(names[i].trim());
             }    
             else
-            {
-                if (checkupper(names[i]))
-                {
-                    upper.push(names[i]);
-                }    
-               else
-               {
-                    lower.push(names[i]) ;
-               }
-            }
+           {
+                lower.push(names[i].trim()) ;
+           }
+        }
     }
 output=lower.concat(upper);
 if (output.length==1)
 {   
-    if (output[0]==output[0].toUpperCase)
+    if (output[0]==output[0].toUpperCase())
     {
-        return `HELLO ${output[0]}.` ;
+        return `HELLO, ${output[0]}.` ;
     }
     else
     {
@@ -73,7 +73,7 @@ for (let j=0; j<output.length; j++)
     {
         if (output[j]==output[j].toUpperCase())
         {
-            str1+=`HELLO ${output[j]}, `;
+            str1+=`HELLO ${output[j]}!, `;
         }
         else
         {
@@ -84,7 +84,7 @@ for (let j=0; j<output.length; j++)
     {
         if (output[j]==output[j].toUpperCase())
         {
-            str1+=`AND HELLO ${output[j]}.`;
+            str1+=`AND HELLO ${output[j]}!.`;
         }
         else
         {
@@ -95,16 +95,14 @@ for (let j=0; j<output.length; j++)
     {
         if (output[j]==output[j].toUpperCase())
         {
-            str1+=`HELLO ${output[j]}, `;
+            str1+=`HELLO ${output[j]}!, `;
         }
         else
         {
             str1+=`${output[j]}, `;
         }
     }  
-}  
-console.log(output);  
+}    
 return str1; 
-   
 }      
-console.log(greet(["hhhd","jjdj"]));
+console.log(greet(["Jill","Jack,John"]));
