@@ -24,9 +24,10 @@
             //create a array of shouted names
             const shoutedName = [];
             let greetMessage = "";
-
+console.log(nameArray);
             //seperate the nameArray into two arrays:- shoutedName array and normalName array
             for(let i=0;i<nameArray.length;i++){
+                if(nameArray[i] == '') continue;
                 if(nameArray[i] == nameArray[i].toUpperCase()){
                     shoutedName.push(nameArray[i]);
                     continue;
