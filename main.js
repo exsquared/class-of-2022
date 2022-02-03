@@ -5,7 +5,7 @@ const para = document.querySelector('#messages');
 btn.addEventListener('click', calling);
 
 function calling() {
-    const name = input.value.split(' ');
+    const name = input.value.trim().split(' ');
     para.textContent = greet(name);
 }
 
