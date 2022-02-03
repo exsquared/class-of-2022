@@ -109,13 +109,6 @@ function setCase(message, typeCase){
     return message;
 }
 
-function commaStringSeparator(message){
-    message = message.replace(' ', '');
-    message = message.split(',');
-
-    return separateCase(message);
-}
-
 function isUpper(message){
     return message == message.toUpperCase();
 }
