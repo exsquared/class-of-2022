@@ -17,7 +17,7 @@ function generateNames(userNames) {
     let smallCaseNames = [], upperCaseNames = [];
 
     // Seperating uppercase elements to the end of the array
-    
+
     let isUpperCase = false;
     let upperCaseIdx = 0;
     let foundQuotes = false, csvMessage = '';
@@ -65,7 +65,7 @@ function generateGreetingMessage(names, isUpperCase) {
     if (names.length == 1) {
         const name = names[0].toString();
         if (name.toUpperCase() === name)
-            return `HELLO, ${name}.`;
+            return `HELLO, ${name}!`;
         else
             return `Hello, ${name}.`;
     }
@@ -82,7 +82,12 @@ function generateGreetingMessage(names, isUpperCase) {
             greetingMessage += ', AND ';
         else
             greetingMessage += ', and ';
-        greetingMessage += names[names.length - 1] + '.';
+
+        greetingMessage += names[names.length - 1];
+        if (isUpperCase) {
+            greetingMessage += '!';
+        }
+        else greetingMessage += '.';
         return greetingMessage;
     }
 }
