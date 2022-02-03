@@ -62,37 +62,63 @@ function greet(myArray) {
             }
         }
         //creating an array of caps
-            else if(myArray[i] !== myArray[i].toUpperCase()){
-                capital = `${str1.toUpperCase()} ${myArray[i].toUpperCase()}`;             
+            else if(myArray[i] === myArray[i].toUpperCase()){
+                
+                capital[++k] += ` ${myArray[i].toUpperCase()}`;             
         }
-        //creating an array which would store the excape sequence words
-        else if(myArray[i].includes('\'') ){
-
-               test[k++] =  myArray[i] ;
+                         
         }
-                             
-        }
+    
         let joined = '';
-        
-      
-       
-       joined =  `${str1} ${str}, ${strEx} `;
-        
-       strEx += `${test[0]} and ${test[1]}`;
-       if(!strEx){
         if(!capital){
-            joined = `${str1} ${str} and ${last} `;
+            if(myArray.length===1){
+            joined = `${str1} ${str}`;
         }
+      else if(myArray.length===2){
+        joined = `${str1} ${myArray[0]} and ${myArray[1]}`;
+      }
+       
+      else{
+        joined = `${str1} ${str} and ${last} `;
+      }
+        }
+       
+    
+       
         else{
-            joined = `${str1} ${str} ${last} and ${capital} `;
-       }
-       }
-       else{
-        joined = `${str1} ${str} ${last}  and ${strEx}`;
-       }
+            if(capital.length===1 && myArray.length === 1){
+                joined = `${str1.toUpperCase()} ${capital[0]} `;
+            }
+            else if(capital.length===2 && myArray.length === 2){
+                joined = `${str.toUpperCase()} ${capital[0]} AND ${str1.toUpperCase()} ${capital[1]}`;
+            }
+            else if((capital.length===1) && myArray.length>=2){
+                joined = `${str1} ${str} ${last} and ${str1.toUpperCase()} ${capital[0]}`;
+            }
+            else if((capital.length>2) && (myArray.length>2)) {
+                let caps = '';
+                let caplast = '';
+                for(let l=0; l<capital.length; l++){
+                    if(l!==capital.length-2){
+                        caps += `${capital[l]}, `;
+                    }
+                    else{
+                        caplast = `${capital[l]}`
+                    }
+                   
+                }
+                joined = `${str1} ${str} ${last} and ${str1.toUpperCase()} ${caps} AND ${caplast}`;
+                
+            }
+
+            }
+            
+        }
+        
           
         return(joined);
     }
-}
+
+
 
 </script>
