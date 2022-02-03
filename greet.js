@@ -25,6 +25,17 @@ function greet(names)
         }
         return false; 
     }
+    function pushing(name)
+    {
+        if (checkupper(name))
+        {
+            upper.push(name.trim());
+        }    
+        else
+        {
+            lower.push(name.trim()) ;
+        }
+    }
 
     for (let i = 0; i < names.length; i++)    //iterate through the input
     {           
@@ -33,26 +44,12 @@ function greet(names)
             let diff = names[i].split(",");
             for (d of diff)
             {
-                if (checkupper(d))
-                {
-                    upper.push(d.trim());
-                }    
-                else
-                {
-                    lower.push(d.trim()) ;
-                }
+               pushing(d); 
             }
         }    
         else
         {
-            if (checkupper(names[i]))
-            {
-                upper.push(names[i].trim());
-            }    
-            else
-           {
-                lower.push(names[i].trim()) ;
-           }
+           pushing(names[i]);
         }
     }
 output=lower.concat(upper);
@@ -60,7 +57,7 @@ if (output.length==1)
 {   
     if (output[0]==output[0].toUpperCase())
     {
-        return `HELLO, ${output[0]}.` ;
+        return `HELLO, ${output[0]}!.` ;
     }
     else
     {
