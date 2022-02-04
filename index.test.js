@@ -7,9 +7,10 @@ function greet(message = 'my friend', greetLang = 'Hello', separator = ','){
 }
 
 function checkMessage(message){
-    message = message.trim();
-    if (message == '' || message == null){
+    if (message == null){
         return 'my friend';
+    }else if(message.trim() == ''){
+        return 'my friend'
     }
     return message;
 }
@@ -194,6 +195,11 @@ describe("Test Case for Greeting TOD", () => {
     });
     it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
         const inputString = "  ";
+        const greetingMessage = greet(inputString);
+        expect(greetingMessage).toBe("Hello, my friend.");
+    });
+    it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
+        const inputString = null;
         const greetingMessage = greet(inputString);
         expect(greetingMessage).toBe("Hello, my friend.");
     });
