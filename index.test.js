@@ -62,7 +62,7 @@ function separateCase(arr){
                 Handling requirements with escape characters, allowing us to
                 treat such entries as a single entity.
                 */
-                lowercaseNames.push(element.slice(1, element.length-1)); // Removes first two and last two characters.
+                lowercaseNames.push(element.slice(1, element.length-1)); // Removes first two and last two characters, i.e, quotes.
             }else{
                 // Spliting non-escape character strings, treating them as different entries.
                 const splitArray = element.split(',');
@@ -165,18 +165,28 @@ describe("Test Case for Greeting TOD", () => {
         expect(greetingMessage).toBe("HELLO KENNY AND EVERGARDEN!");
     });
     it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
-        const inputString = ["Kenny", "Stryker"];
-        const greetingMessage = greet(inputString);
-        expect(greetingMessage).toBe("Hello, Kenny and Stryker.");
-    });
-    it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
         const inputString = ["Kenny", "STRYKER", "Evergarden"];
         const greetingMessage = greet(inputString);
         expect(greetingMessage).toBe("Hello, Kenny and Evergarden. AND HELLO STRYKER!");
     });
     it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
-        const inputString = "Jack, John, DAWN";
+        const inputString = ["Kenny", "STRYKER", "Evergarden", "SENPAI"];
         const greetingMessage = greet(inputString);
-        expect(greetingMessage).toBe("Hello, Jack and John. AND HELLO DAWN!");
+        expect(greetingMessage).toBe("Hello, Kenny and Evergarden. AND HELLO STRYKER AND SENPAI!");
+    });
+    it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
+        const inputString = ["Kenny", "STRYKER", "Evergarden", "SENPAI", "Violet", "SNOW"];
+        const greetingMessage = greet(inputString);
+        expect(greetingMessage).toBe("Hello, Kenny, Evergarden, and Violet. AND HELLO STRYKER, SENPAI, AND SNOW!");
+    });
+    it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
+        const inputString = "Kenny, Evergarden";
+        const greetingMessage = greet(inputString);
+        expect(greetingMessage).toBe("Hello, Kenny and Evergarden.");
+    });
+    it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
+        const inputString = ["Violet", "Kenny, Evergarden"];
+        const greetingMessage = greet(inputString);
+        expect(greetingMessage).toBe("Hello, Violet, Kenny, and Evergarden.");
     });
 });
