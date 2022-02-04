@@ -8,7 +8,7 @@ function greet(message = 'my friend', greetLang = 'Hello', separator = ','){
 function printGreetingArray(greetLang, message, separator){
     let separatedCases = separateCase(message);
     let lowercaseNames = separatedCases.lowercaseNames;
-    let uppercaseNames = separatedCases.uppercaseNames
+    let uppercaseNames = separatedCases.uppercaseNames;
 
     let lowercaseGreeting = printGreetingMessage(greetLang, handleArray(lowercaseNames, 0, separator), lowercaseNames, 0);
     let uppercaseGreeting = printGreetingMessage(greetLang, handleArray(uppercaseNames, 1, separator), uppercaseNames, 1);
