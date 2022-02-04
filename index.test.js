@@ -87,7 +87,10 @@ function separateCase(arr){
             }
         }
         // Separating Capitalized and UPPERCASE names.
-        else if(isUpper(element)){
+        else if(checkMessage(element) == 'my friend'){
+            lowercaseNames.push('my friend');
+            break;
+        }else if(isUpper(element)){
             uppercaseNames.push(element);
         }else{
             lowercaseNames.push(element);
@@ -195,6 +198,11 @@ describe("Test Case for Greeting TOD", () => {
     });
     it("Should return the greeting.", () => {
         const inputString = "  ";
+        const greetingMessage = greet(inputString);
+        expect(greetingMessage).toBe("Hello, my friend.");
+    });
+    it("Should return the greeting.", () => {
+        const inputString = ["  "];
         const greetingMessage = greet(inputString);
         expect(greetingMessage).toBe("Hello, my friend.");
     });
