@@ -2,7 +2,16 @@ function greet(message = 'my friend', greetLang = 'Hello', separator = ','){
     if(Array.isArray(message)){
         return printGreetingArray(greetLang, message, separator);
     }
+    message = checkMessage(message);
     return printGreetingString(greetLang, message, separator);
+}
+
+function checkMessage(message){
+    message = message.trim();
+    if (message == '' || message == null){
+        return 'my friend';
+    }
+    return message;
 }
 
 function printGreetingArray(greetLang, message, separator){
@@ -182,5 +191,10 @@ describe("Test Case for Greeting TOD", () => {
         const inputString = ["Violet", "Kenny, Evergarden"];
         const greetingMessage = greet(inputString);
         expect(greetingMessage).toBe("Hello, Violet, Kenny, and Evergarden.");
+    });
+    it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
+        const inputString = "  ";
+        const greetingMessage = greet(inputString);
+        expect(greetingMessage).toBe("Hello, my friend.");
     });
 });
