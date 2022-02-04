@@ -18,7 +18,7 @@ function printGreetingArray(greetLang, message, separator){
     }else if(uppercaseGreeting.length >=1){
         return `${uppercaseGreeting}`;
     }else{
-        return `${lowercaseGreeting}`
+        return `${lowercaseGreeting}`;
     }
 }
 
