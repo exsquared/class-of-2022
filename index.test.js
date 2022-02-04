@@ -202,7 +202,7 @@ describe("Test Case for Greeting TOD", () => {
         expect(greetingMessage).toBe("Hello, my friend.");
     });
     it("Should return the greeting.", () => {
-        const inputString = ["  "];
+        const inputString = ["  ", "  "];
         const greetingMessage = greet(inputString);
         expect(greetingMessage).toBe("Hello, my friend.");
     });
