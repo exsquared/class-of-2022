@@ -40,7 +40,7 @@ function printGreetingString(greetLang, message, separator){
 
 function printGreetingMessage(greetLang, message, arr, typeCase){
     terminator = ['.', '!'];
-    lowercaseOrUpperCase = [',', '']
+    lowercaseOrUpperCase = [',', ''];
     
 
     if(arr.length == 0){
@@ -96,7 +96,7 @@ function handleArray(message, typeCase, separator){
         return setCase(message[0], typeCase[0]);
     }else if(message.length == 2){
         
-        return `${setCase(message[0], typeCase[0])} ${setCase('and', typeCase[0])} ${setCase(message[1], typeCase[1])}`
+        return `${setCase(message[0], typeCase[0])} ${setCase('and', typeCase[0])} ${setCase(message[1], typeCase[1])}`;
     }else{
         return message.slice(0, message.length-1).join(`${separator} `) + ", and " + message[message.length - 1];
     }
