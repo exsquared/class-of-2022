@@ -93,10 +93,9 @@ function handleArray(message, typeCase, separator){
     if(message.length == 0){
         return '';
     }else if(message.length == 1){
-        return setCase(message[0], typeCase[0]);
+        return message[0];
     }else if(message.length == 2){
-        
-        return `${setCase(message[0], typeCase[0])} ${setCase('and', typeCase[0])} ${setCase(message[1], typeCase[1])}`;
+        return `${message[0]} and ${message[1]}`;
     }else{
         return message.slice(0, message.length-1).join(`${separator} `) + ", and " + message[message.length - 1];
     }
