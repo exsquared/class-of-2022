@@ -193,12 +193,12 @@ describe("Test Case for Greeting TOD", () => {
         const greetingMessage = greet(inputString);
         expect(greetingMessage).toBe("Hello, Violet, Kenny, and Evergarden.");
     });
-    it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
+    it("Should return the greeting.", () => {
         const inputString = "  ";
         const greetingMessage = greet(inputString);
         expect(greetingMessage).toBe("Hello, my friend.");
     });
-    it("Should return the greeting separated with a comma and 'and' if there are more than two names.", () => {
+    it("Should return the greeting.", () => {
         const inputString = null;
         const greetingMessage = greet(inputString);
         expect(greetingMessage).toBe("Hello, my friend.");
