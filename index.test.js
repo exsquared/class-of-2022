@@ -10,8 +10,8 @@ function printGreetingArray(greetLang, message, separator){
     let lowercaseNames = separatedCases.lowercaseNames;
     let uppercaseNames = separatedCases.uppercaseNames;
 
-    let lowercaseGreeting = printGreetingMessage(greetLang, handleArray(lowercaseNames, 0, separator), lowercaseNames, 0);
-    let uppercaseGreeting = printGreetingMessage(greetLang, handleArray(uppercaseNames, 1, separator), uppercaseNames, 1);
+    let lowercaseGreeting = printGreetingMessage(greetLang, handleArray(lowercaseNames, separator), lowercaseNames, 0);
+    let uppercaseGreeting = printGreetingMessage(greetLang, handleArray(uppercaseNames, separator), uppercaseNames, 1);
 
     if(lowercaseGreeting.length >= 1 && uppercaseGreeting.length >=1){
         return `${lowercaseGreeting} AND ${uppercaseGreeting}`;
@@ -44,7 +44,7 @@ function printGreetingMessage(greetLang, message, arr, typeCase){
     
 
     if(arr.length == 0){
-        return setCase('', typeCase);
+        return '';
     }else{
         return setCase(`${greetLang}${lowercaseOrUpperCase[typeCase]} ${message}${terminator[typeCase]}`, typeCase);
     }
@@ -87,7 +87,7 @@ function separateCase(arr){
     return { uppercaseNames, lowercaseNames };
 }
 
-function handleArray(message, typeCase, separator){
+function handleArray(message, separator){
     message = message.map(msg => msg.trim());
 
     if(message.length == 0){
