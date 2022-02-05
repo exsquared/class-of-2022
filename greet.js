@@ -76,4 +76,3 @@ for (let j=0; j<output.length; j++) {
 return str1; 
 }   
 
-console.log(greet(["Lalit"]))
