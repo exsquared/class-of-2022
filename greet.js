@@ -1,105 +1,79 @@
+//function to check if string is uppercase
+function checkupper(str1)  {
+    return (str1==str1.toUpperCase());
+}
+//function to check if string contains ","
+function checkcomma(str2) {
+    if (str2.includes(",")) {
+        if (str2.includes("\\")==false) {
+                return true;
+        }          
+    }
+    return false; 
+}
+
+function pushing(name) {
+    if (checkupper(name))  {
+        upper.push(name.trim());
+    }    
+    else {
+        lower.push(name.trim()) ;
+    }
+}
+
 function greet(names)
 {
     lower=[];
     upper=[];
     str1=""
 
-    //function to check if string is uppercase
-    function checkupper(str1)  
-    {
-        if (str1==str1.toUpperCase())
-        {
-            return true;
-        }
-        return false;
-    }
-    //function to check if string contains ","
-    function checkcomma(str2)
-    {
-        if (str2.includes(","))
-        {
-            if (str2.includes("\\")==false)
-            {
-                return true;
-            }          
-        }
-        return false; 
-    }
-    function pushing(name)
-    {
-        if (checkupper(name))
-        {
-            upper.push(name.trim());
-        }    
-        else
-        {
-            lower.push(name.trim()) ;
-        }
-    }
-
-    for (let i = 0; i < names.length; i++)    //iterate through the input
-    {           
-        if (checkcomma(names[i]))
-        {
+    for (let i = 0; i < names.length; i++) {           
+        if (checkcomma(names[i]))  {
             let diff = names[i].split(",");
-            for (d of diff)
-            {
+            for (d of diff) {
                pushing(d); 
             }
         }    
-        else
-        {
+        else {
            pushing(names[i]);
         }
     }
 output=lower.concat(upper);
-if (output.length==1)
-{   
-    if (output[0]==output[0].toUpperCase())
-    {
+if (output.length==1) {   
+    if (checkupper(output[0])) {
         return `HELLO, ${output[0]}!.` ;
     }
-    else
-    {
+    else {
         return `Hello, ${output[0]}.`;
     }    
 }
-for (let j=0; j<output.length; j++)
-{
-    if (j==0)
-    {
-        if (output[j]==output[j].toUpperCase())
-        {
+for (let j=0; j<output.length; j++) {
+    if (j==0) {
+        if (checkupper(output[j])) {
             str1+=`HELLO ${output[j]}!, `;
         }
-        else
-        {
+        else {
             str1+=`Hello, ${output[j]}, `;
         }
     }
-    else if (j==(output.length-1))
-    {
-        if (output[j]==output[j].toUpperCase())
-        {
+    else if (j==(output.length-1)) {
+        if (checkupper(output[0])) {
             str1+=`AND HELLO ${output[j]}!.`;
         }
-        else
-        {
+        else {
             str1+=`and ${output[j]}.`;
         }
     }
-    else
-    {
-        if (output[j]==output[j].toUpperCase())
-        {
+    else {
+        if (output[j]==output[j].toUpperCase()) {
             str1+=`HELLO ${output[j]}!, `;
         }
-        else
-        {
+        else {
             str1+=`${output[j]}, `;
         }
     }  
 }    
 return str1; 
-}      
-console.log(greet(["Jill","Jack,John"]));
+}   
+
+console.log(greet(["Lalit"]))
