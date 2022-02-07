@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>Bill Generator</title>
+    </head>
+    <link rel="stylesheet" href="mystyle.css">
+    
+    <body>
+       
+        <h1>The Calculator Bill Wants</h1>
+        <h3>Big Bill has "hired" his nephew who "does web design" to make the UI for the site.</h3>
+        <h2>This is what he got back: </h2>
+        <div class="container grandParentContaniner">
+            
+            
+        <div class="form-center parentContainer" >
+            <fieldset>
+            
+            <form class="form">
+              
+                    Gold (1000) <input type="radio" name="plan" value="Gold" checked><br>
+                    Silver (500) <input type="radio" name="plan" value="Silver"><br>
+               
+                
+                <label for="lines">Additional lines: </label> 
+                <select name="lines" id="lines">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    
+                  </select><br>
+                <label for="mins">Additional Minutes:  <input type="number" id="min" name="min"></label><br>
+                <input type="button" value="Calculate Total" class="submitButton"><br><br>
+           
+              </form>
+              <label id="totalBill">Total $: </label> <input type="text" id="totalBillDisplayed" disabled>
+
+            </fieldset>
+        </div>
+        </div>   
+    </body>
+    <script type = "module" src="./backend-connector.js"></script>
+
+</html>

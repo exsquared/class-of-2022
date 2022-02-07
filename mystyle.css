@@ -1,0 +1,61 @@
+body {
+           
+    margin: 10;
+    padding: 10;
+    overflow: hidden;
+}
+fieldset{
+    background-color:lavender;
+}
+h1 {
+    margin:auto;
+    
+    color : #000000;
+    text-align : center;
+    font-family: "SIMPSON";
+}
+#totalBill{
+    font-size: 20;
+}
+.submitButton{
+    font-size: 15;
+}
+form {
+    width: 400px;
+    font-size: 20;
+    
+}
+fieldset{
+    border-style: hidden;
+    height:fit-content;
+    width: fit-content;
+    padding: top -20px;
+}
+.form-center {
+    display:flex;
+    justify-content: center;
+    
+}
+#min{
+    width: 10%;
+}
+#totalBillDisplayed{
+    font-size: 15;
+}
+.grandParentContaniner{
+ height:100%; margin: 0 auto;
+display: flex;
+justify-content: center;
+}
+.parentContainer{
+display:table-cell; vertical-align:middle;
+}
+.submitButton {
+background-color: lightgrey;
+color:#000000;
+border-width: 0.5;
+}
+#totalBillDisplayed{
+
+width: 50% ;
+}
