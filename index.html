@@ -1,0 +1,79 @@
+<html>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        fieldset{
+            background-color: rgb(203, 206, 230);
+        }
+        h1 {
+            color : #000000;
+            text-align : center;
+            font-family: "SIMPSON";
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        fieldset{
+            border-style: hidden;
+            height:fit-content;
+            width: fit-content;
+        }
+        .form-center {
+            display:flex;
+            justify-content: center;
+            
+        }
+        .Minutes{
+            width: 15%;
+        }
+        .grandParentContaniner{
+		display:table; 
+        height:100%; 
+        margin: 0 auto;
+	}
+        .parentContainer{
+		display:table-cell;
+        vertical-align:middle;
+	}
+    #calc {
+       background-color: lightgrey;
+       color:#000000;
+       border-width: 0.5;
+    }
+    #amt{
+     
+       width: 50% ;
+    }
+    </style>
+    <body>
+        
+        <h1>Phone Bill Generator</h1>
+        <div class="container grandParentContaniner">
+            
+        <div class="form-center parentContainer" >
+        <fieldset>
+        <form>        
+                Gold (1000 mins.) <input type="radio" name="plan" value="Gold" checked><br>
+                Silver (500 mins.) <input type="radio" name="plan" value="Silver">
+                 <br>
+            Additional Lines : <select class = "lines">
+                        <option value = "0"> 0 </option>
+                        <option value = "1"> 1 </option>
+                        <option value = "2"> 2 </option>
+                        <option value = "3"> 3 </option>
+                        <option value = "4"> 4 </option>
+                        <option value = "5"> 5 </option>
+                        <option value = "6"> 6 </option>
+                    </select><br> 
+            Additional Minutes : <input type = "number" class="Minutes"> <br><br> 
+            <input type="button" value ="Calculate Total" id="calc">   
+        </form>
+        Total $: <b><input type="text" id="amt">
+    </fieldset>
+        <script type ="module" src="connnector.js"></script>
+    </body>
+</html>
