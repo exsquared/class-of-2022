@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Bills</title>
+</head>
+
+<body>
+    <center>
+        <h1>Phone Bill Calculator</h1>
+
+        <label for="plans">Choose a Plan:</label>
+        <select name="plans" id="plans" autofocus>
+            <option value="Make a choice">Make a choice</option>
+            <option value="Gold">Gold</option>
+            <option value="Silver">Silver</option>
+        </select>
+
+        <br>
+
+        <label for="minutes">Enter total minutes:</label><br>
+        <input type="number" placeholder="1000" id="minutes">
+
+        <br>
+
+        <label for="lines">Enter total lines:</label><br>
+        <input type="number" placeholder="1" id="lines"> <br>
+        <button type="reset" id="reset">reset</button>
+        <button type="submit" id="submit">submit</button>
+
+
+        <p id="billAmount"></p>
+        <script type="module" src="index.js"></script>
+    </center>
+</body>
+
+</html>
