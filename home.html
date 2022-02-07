@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Phone Bill Generator</title>
+    </head>
+
+    <style>
+        body{
+            overflow: hidden;
+
+        }
+        .submitButton {
+            background-color: rgb(239, 239, 239);
+            border-width: 0.5;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        fieldset{
+            border-style: hidden;
+            height:fit-content;
+            width: fit-content;
+        }
+        .form-center {
+            display:flex;
+            justify-content: center;
+            
+        }
+        fieldset{
+            background-color: rgb(237, 237, 248);
+        }
+
+    </style>
+    
+    <body>
+        <div class="form-center">
+            <fieldset>                
+                <form class="form">
+                    <div>
+                    <div>
+                        Gold (1000 mins) <input type="radio" name="planType" value="Gold" checked><br>
+                        Silver (500 mins) <input type="radio" name="planType" value="Silver">
+                    </div>
+                    <div>
+                        Additional lines:
+                        <select class="AdditionalLines">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                        </select>
+                    </div>
+                    <div>
+                        Additional minutes: <input type="text" class="additionalMinutes" size="2">
+                    </div>
+                    <div>
+                        <input type="button" value="Calculate Total" class="submitButton">
+                    </div>
+                    <br>
+                    <div>
+                        Total $: <input type="number" min="0" class="totalAmount" disabled>
+                    </div>
+                </div>
+              </form>
+            </fieldset>
+        </div>
+    </body>
+
+    <script type="module" src="./backend-connector.js"></script>
+
+</html>
