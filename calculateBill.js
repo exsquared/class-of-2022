@@ -1,14 +1,27 @@
 const typesOfPlan = ['Gold', 'Silver'];
 
-export function calculateBill(planType, countAdditionalLines = 1, totalMinutes = 0) {
-    if (!typesOfPlan.includes(planType))
+export function calculateBill(planType, countAdditionalLines = 1, totalMinutes = 1) {
+
+    planType = planType.trim();
+
+    if (checkInputValidity(planType, countAdditionalLines, totalMinutes) == -1)
         return -1;
+
     const baseRate = calculateBaseRate(planType);
     const additionalLinesPrice = calculateAdditionalLinesPrice(countAdditionalLines, planType);
     const extraMinutePrice = calculateExtraMinutePrice(planType, totalMinutes);
     let totalBill = calculateTotalBillPrice(baseRate, additionalLinesPrice, extraMinutePrice);
 
     return Math.round(totalBill * 100) / 100;
+}
+
+function checkInputValidity(planType, countAdditionalLines, totalMinutes) {
+    if (!typesOfPlan.includes(planType))
+        return -1;
+    if (countAdditionalLines < 1 || countAdditionalLines > 6 || countAdditionalLines.toString().trim() == '')
+        return -1;
+    if (totalMinutes < 0 || totalMinutes.toString().trim() == '')
+        return -1;
 }
 
 function calculateExtraMinutePrice(planType, totalMinutes) {

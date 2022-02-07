@@ -1,8 +1,8 @@
 import { calculateBill } from "./calculateBill.js";
 
 const submitBtn = document.querySelector('#btn_submit');
-const input_totalLines = document.querySelector('#input_additional_lines');
-const input_totalMinutes = document.querySelector('#input_additional_minutes');
+const input_totalLines = document.querySelector('#input_total_lines');
+const input_totalMinutes = document.querySelector('#input_total_minutes');
 const billAmount = document.querySelector('#output_total_bill');
 
 for (let i = 1; i <= 6; i++) {
