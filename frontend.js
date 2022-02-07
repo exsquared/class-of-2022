@@ -30,8 +30,8 @@ function getResult(e) {
     } else {
         const res = calculate(userType, userLines, userMinutes);
 
-        if (res === "The selected item is not available for rent.") {
-            outputfield.value = `${res}`;
+        if (res === -1) {
+            outputfield.value = `The Selected Item is not an avialable type. `;
         } else {
             outputfield.value = `${res}`;
         }
