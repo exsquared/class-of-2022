@@ -1,6 +1,6 @@
 import {calculateBill} from './index';
 
-describe("index.test.js", ()=>{
+describe("index.js", ()=>{
     describe("calculateBill", ()=>{
         it("Should handle the null case", ()=>{
             //will return 0 in case we are not passing any argument to it...
