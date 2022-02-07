@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Bill Calculator</h1>
+    <div
+      style="
+        background-color: plum;
+        width: 25%;
+        margin-left: 37%;
+        margin-top: 20px;
+        padding: 20px;
+      "
+    >
+      <label for="plan_type">Choose a Plan Type : </label><br />
+      <label for="plan_type">Gold : </label>
+      <input type="radio" value="gold" id="gold" name="random" />
+      <label for="plan_type">Silver : </label>
+      <input type="radio" value="silver" id="silver" name="random" />
+      <br />
+      Lines Used:-
+      <select name="totalLines" id="lines_used">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+      </select>
+      <br />
+      Minutes Used:-
+      <input
+        type="number"
+        id="minutes_used"
+        placeholder="Enter number of minutes used"
+        required
+      /><br />
+      <button type="submit" id="calculate_bill">Calculate Bill</button
+      ><br /><br />
+      <label>Bill amount is:- $</label
+      ><input id="bill_amount" type="text" disabled />
+    </div>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
