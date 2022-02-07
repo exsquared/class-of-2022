@@ -7,15 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<!-- <style>
-    h1{text-align: center;}
-    form {text-align: center;}
-    div {margin: auto;height: 160px; width: 30%; background-color: powderblue;text-align: center;}
-</style> -->
 <body>
     <h1 >BILL CALCULATOR</h1>
     <br><br>
-    <div class = "formDiv">
+    <div>
         <form>
             <label for="gold" > Gold(1000 mins) </label>
             <input type="radio" name = "type" id = "gold" value="Gold"><br>
@@ -34,9 +29,9 @@
             <br>
 
             <label for="minutes">Additional Minutes: </label>
-            <input type="text" id ="minutes_Used" size="1"><br>
+            <input type="number" id ="minutes_Used" min="1" max="100000"><br>
 
-            <button type="submit" id="calculate_Bill">Calculate Total</button><br><br>
+            <button type="submit" id="calculate_Bill">Calculate Total</button><br>
 
             <label for="total">Total $:</label>
             <input type="text" id="result_Box" disabled>

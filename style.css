@@ -4,4 +4,9 @@ h1{
 form {
     text-align: center;
 }
-div {margin: auto;height: 160px; width: 30%; background-color: powderblue;text-align: center;}
+div {
+    margin: auto;
+    height: 160px; 
+    width: 30%; 
+    background-color: powderblue;
+}

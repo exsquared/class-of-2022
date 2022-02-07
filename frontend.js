@@ -13,7 +13,7 @@ calculateBill.addEventListener('click', getResult);
 function getResult(e){
     e.preventDefault();
     const userType = (itemGold.checked)? itemGold.value : itemSilver.value;
-    const userLines = parseInt(linesUsed.value);
+    const userLines = parseInt(linesUsed.value) ;
     const userMinutes = parseInt(minutes.value);
 
     if(!itemGold.checked && !itemSilver.checked){
