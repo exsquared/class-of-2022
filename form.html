@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type= "text/css">
+        
+        body{
+            
+            
+            font-family: sans-serif;
+            margin-top: 40px;
+
+        }
+       
+       
+        form{
+            
+            background-color: lavender;
+        
+           
+           
+
+
+        }
+        fieldset{
+            border-style: hidden;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            
+           
+        }
+        .main{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .mins{
+            width: 20%;
+        }
+        
+        </style>
+</head>
+<body >
+    <div class ="regform">  </div>
+   
+
+    <h1 class="main">The Calculator Bill Wants</h1>
+    <fieldset>
+    <form action="#"  id="form">
+        <table>
+            <tr>
+                <td>
+                    <input type="radio" name="planType" value="Gold" checked> Gold(1000 mins)
+                    
+
+                 </td>   
+                 
+             </tr>
+             <tr>
+                 <td>
+                     <input type="radio" name="planType" value="Silver"> Silver(500 mins) 
+                    </td>
+                </tr>
+             
+             <tr>
+                 <td>
+                      Additional lines:
+                 </td>  
+                 <td>
+                     <select class="lines">
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                     </select>
+                 </td>      
+            </tr>
+            <tr>
+                <td>
+                    Additional minutes
+                </td>
+                <td>
+                    <input type = "number" name="" class="mins">
+                </td>
+            </tr> 
+            <tr>
+                <td>
+                    <input type ="button" value="Calculate Total" class="submit">
+                </td>
+            </tr>  
+        </table>
+        <h2 >Total $: <input type="text" id = "displayBill" disabled></h2>
+    </div>
+
+    </form>
+</fieldset>
+    
+</body>
+<script type="module" src="./backend.js"></script>
+</html>
