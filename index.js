@@ -1,7 +1,7 @@
 export function calculateBill(plan, lines = 1, mins=1){
     const baseAmount = getPlanBase(plan);
 
-    if(baseAmount == 0){
+    if(baseAmount == 0 || lines<1 || mins < 0 || !plan ){
         return 0;
     }
     const minsExceeding = getExceedingMinutes(getMinutes(plan), mins);
@@ -22,37 +22,46 @@ export function calculateBill(plan, lines = 1, mins=1){
         amount = Number((baseAmount + costLines + minutesExceeds).toFixed(2));
       }
       
-      //totalBill.innerHTML = amount;
+      
       return amount;
     
 }
 
 
-function isDiscountedLines(lines){
+export function isDiscountedLines(lines){
     if(lines>3){
         return (lines-3);
     }
     return 0;
 }
 
-function getMinutesRate(plan){
+export function getMinutesRate(plan){
+    if(!plan){
+        return "Error!";
+    }
     return plan==="Gold" ? 0.45 : 0.54;
 }
-function getMinutes(plan){
+export function getMinutes(plan){
+    if(!plan){
+        return("Error!")
+    }
     return plan==="Gold" ? 1000 : 500;
 }
 
-function getExceedingMinutes(baseMinute, mins){
+export function getExceedingMinutes(baseMinute, mins){
        if(mins > baseMinute){
             return (mins-baseMinute);
         }
     return 0;
 }
-function getCostPerLines(plan){
+export function getCostPerLines(plan){
+    if(!plan){
+        return("Error!");
+    }
     return plan ==="Gold" ? 14.50 : 21.50;
 }
 
-function getPlanBase(plan){
+export function getPlanBase(plan){
     if(plan==="Gold"){
         return 49.95;
     }

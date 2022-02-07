@@ -1,7 +1,7 @@
 import { calculateBill } from './index.js';
 
 const submitButton = document.querySelector('.submitButton');
-//const totalBill = document.querySelector("#totalBillDisplayed");
+
 
 const noOfLines = document.querySelector("#lines");
 const noOfMinutes = document.querySelector("#min");
