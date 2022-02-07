@@ -4,43 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 align="center">Phone Bill Calculator</h1>
-    <form>
-        <label for="Gold">Gold(1000 mins)</label>
-        <input type="radio" value="Gold" id="Gold" name="random"> 
-        <br>
+    <h1>Phone Bill Calculator</h1>
 
-        <label for="Gold">Silver(500 mins)</label>
-        <input type="radio" value="Silver" id="Silver" name="random">
-        <br>
+    <div id="formbody">
+        <form>
+            <label for="Gold">Gold(1000 mins)</label>
+            <input type="radio" value="Gold" id="Gold" name="random"> 
+            <br>
+    
+            <label for="Gold">Silver(500 mins)</label>
+            <input type="radio" value="Silver" id="Silver" name="random">
+            <br>
+    
+            <label for="additionalLines">Additional Lines:</label>
+            <select name="additionalLines" id="additionalLines">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <br>
+    
+            <label for="additionalMinutes">Additional Minutes: </label>
+            <input type="number" name="numberOfMinutes" id="additionalMinutes" required>
+    
+            <br>
+    
+            <button type="submit" id = "submitButton">Calculate Total</button>
 
-        <label for="additionalLines">Additional Lines:</label>
-        <select name="additionalLines" id="additionalLines">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-        <br>
-
-        <label for="additionalMinutes">Additional Minutes: </label>
-        <input type="number" name="numberOfMinutes" id="additionalMinutes" required>
-
-        <br><br>
-
-        <button type="submit" id = "submitButton">Calculate Total</button>
-    </form>
-
-        <br><br>
-        <label for="phone-bill">Total $: </label>
-        <input type="text" id="phone-bill" disabled>
-    <h2 id="bill-display"></h2>
+            <br><br>
+            <label for="phone-bill">Total $: </label>
+            <input type="text" id="phone-bill" disabled>
+        </form>
+    
+    </div>
     <script type="module" src="index.js"></script>
 </body>
 </html>
