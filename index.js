@@ -1,24 +1,23 @@
 import { calculateBill } from "./calculateBill.js";
 
-const planType = document.querySelector('#plans');
-const submitBtn = document.querySelector('#submit');
-const resetBtn = document.querySelector('#reset');
-const input_totalLines = document.querySelector('#lines');
-const input_totalMinutes = document.querySelector('#minutes');
-const billAmount = document.querySelector('#billAmount');
+const submitBtn = document.querySelector('#btn_submit');
+const input_totalLines = document.querySelector('#input_additional_lines');
+const input_totalMinutes = document.querySelector('#input_additional_minutes');
+const billAmount = document.querySelector('#output_total_bill');
 
-resetBtn.addEventListener('click', resetAll);
 submitBtn.addEventListener('click', submitAll);
 
 function submitAll() {
-    const selectedPlanType = planType.value;
+    const selectedPlanType = document.querySelector("input[type = 'radio'][name='planTypes']:checked").value;
     const totalLines = input_totalLines.value;
     const totalMinutes = input_totalMinutes.value;
     const isInputValid = checkInputValidity(selectedPlanType, totalLines, totalMinutes);
-    if (!isInputValid)
+    if (!isInputValid) {
         alert('Please enter valid input.')
+        return;
+    }
     const receivedResult = calculateBill(selectedPlanType, totalLines, totalMinutes);
-    billAmount.textContent = `Your Bill Amount for ${selectedPlanType} plan with ${totalLines} lines and ${totalMinutes} minutes used is $${receivedResult}.`;
+    billAmount.value = receivedResult;
 }
 function checkInputValidity(selectedPlanType, totalLines, totalMinutes) {
     if (selectedPlanType == 'Make a choice')
@@ -29,10 +28,3 @@ function checkInputValidity(selectedPlanType, totalLines, totalMinutes) {
         return false;
     return true;
 }
-
-function resetAll() {
-    planType.value = 'Make a choice';
-    input_totalLines.value = '';
-    input_totalMinutes.value = '';
-    billAmount.textContent = ''
-}        

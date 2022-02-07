@@ -9,32 +9,41 @@
 </head>
 
 <body>
-    <center>
-        <h1>Phone Bill Calculator</h1>
+    <h1 style="text-align: center">Phone Bill Calculator</h1>
+    <div style="text-align: center;">
+        <label for="radio_gold_plan">Choose a plan:</label>
+        <input type="radio" id="radio_gold_plan" name="planTypes" value="Gold" checked>
+        <label for="radio_gold_plan">Gold (1000 mins)</label>
 
-        <label for="plans">Choose a Plan:</label>
-        <select name="plans" id="plans" autofocus>
-            <option value="Make a choice">Make a choice</option>
-            <option value="Gold">Gold</option>
-            <option value="Silver">Silver</option>
+        <input type="radio" id="radio_silver_plan" name="planTypes" value="Silver">
+        <label for="radio_silver_plan">Silver (500 mins)</label>
+
+        <br>
+
+
+        <label for="input_additional_lines">Additional Lines:</label>
+        <select name="lines" id="input_additional_lines">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
         </select>
+        <br>
+
+        <label for="input_additional_minutes">Enter additional minutes:</label>
+        <input type="number" id="input_additional_minutes">
 
         <br>
 
-        <label for="minutes">Enter total minutes:</label><br>
-        <input type="number" placeholder="1000" id="minutes">
-
+        <button type="submit" id="btn_submit">Calculate Total</button>
         <br>
 
-        <label for="lines">Enter total lines:</label><br>
-        <input type="number" placeholder="1" id="lines"> <br>
-        <button type="reset" id="reset">reset</button>
-        <button type="submit" id="submit">submit</button>
-
-
-        <p id="billAmount"></p>
-        <script type="module" src="index.js"></script>
-    </center>
+        <label for="output_total_bill">Total $:</label>
+        <input type="text" id="output_total_bill" disabled>
+    </div>
+    <script type="module" src="index.js"></script>
 </body>
 
 </html>
