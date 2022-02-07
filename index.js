@@ -1,7 +1,7 @@
 export function calculateBill(inputPlan, totalMinutes = 0, totalLines = 1){
     let monthlyRate = checkPlanRate(inputPlan);
 
-    if(monthlyRate == 0 || totalLines == 0){
+    if(monthlyRate == 0 || totalLines <= 0 || totalLines <= -1){
         return 0;
     }
 
@@ -15,11 +15,11 @@ export function calculateBill(inputPlan, totalMinutes = 0, totalLines = 1){
     return roundNumber(monthlyRate + additionalLinesRate + excessMinutesRate - discountRate);
 }
 
-function roundNumber(number){
+export function roundNumber(number = 0){
     return Math.round(number * 100) / 100;
 }
 
-function calculateFamilyDiscount(inputPlan, totalLines){
+export function calculateFamilyDiscount(inputPlan, totalLines){
     let discount = 5;
     let discountLines = totalLines - 3;
 
@@ -44,11 +44,11 @@ export function hasPlanMinutesExceeded(inputPlan, totalMinutes){
     return false;
 }
 
-function checkExcessMinuteRateByPlan(inputPlan){
+export function checkExcessMinuteRateByPlan(inputPlan){
     return inputPlan == 'Gold' ? 0.45 : 0.54;
 }
 
-function checkPlanRate(inputPlan){
+export function checkPlanRate(inputPlan){
     if(inputPlan == 'Gold'){
         return 49.95;
     }else if(inputPlan == 'Silver'){
