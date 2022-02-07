@@ -1,4 +1,4 @@
-import { calculateBill, hasPlanMinutesExceeded } from './index.js'
+import { calculateBill } from './index.js'
 
 const totalAmount = document.querySelector('.totalAmount');
 const getAdditionalPlanMinutes = document.querySelector('.AdditionalMinutes');
