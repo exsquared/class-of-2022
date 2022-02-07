@@ -5,6 +5,12 @@ const input_totalLines = document.querySelector('#input_additional_lines');
 const input_totalMinutes = document.querySelector('#input_additional_minutes');
 const billAmount = document.querySelector('#output_total_bill');
 
+for (let i = 1; i <= 6; i++) {
+    const options = document.createElement('option');
+    options.value = options.textContent = i;
+    input_totalLines.append(options);
+}
+
 submitBtn.addEventListener('click', submitAll);
 
 function submitAll() {
