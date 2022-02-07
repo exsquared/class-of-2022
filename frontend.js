@@ -1,30 +1,34 @@
 import { calculate } from "./index.js";
 
-const item = document.querySelector('#item_Type');
+const itemGold = document.querySelector('#gold');
+const itemSilver = document.querySelector('#silver');
 const linesUsed = document.querySelector('#lines_Used');
 const minutes = document.querySelector('#minutes_Used');
+
 const calculateBill = document.querySelector('#calculate_Bill');
-const outputfield = document.querySelector('#output_field');
+const outputfield = document.querySelector('#result_Box');
 
 calculateBill.addEventListener('click', getResult);
 
-function getResult(){
-    const userType = item.value.toString();
+function getResult(e){
+    e.preventDefault();
+    const userType = (itemGold.checked)? itemGold.value : itemSilver.value;
     const userLines = parseInt(linesUsed.value);
     const userMinutes = parseInt(minutes.value);
 
-    const res = calculate(userType, userLines, userMinutes);
-    
-    if(!userType|| !userLines  || !userMinutes){
-        alert('Please provide all the fields.');
-    }
-
-    if(res === "The selected item is not available for rent."){
-        outputfield.textContent = `${res}`;
+    if(!itemGold.checked && !itemSilver.checked){
+        alert("Please select an item type.");
+    }else if(!userMinutes){
+        alert("Please enter the number of minutes used.");
     }else{
-        outputfield.textContent = `Your total bill is ${res}`;
-    }
+        const res = calculate(userType, userLines, userMinutes);
     
+        if(res === "The selected item is not available for rent."){
+            outputfield.value = `${res}`;
+        }else{
+            outputfield.value = `${res}`;
+        }
+    }   
 }
 
 

@@ -5,32 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+    <link rel="stylesheet" href="./style.css">
 </head>
-<style>
+<!-- <style>
     h1{text-align: center;}
-    p{font-size: 40px; font-style: bold;}
-    body{align-items: center;}
-</style>
+    form {text-align: center;}
+    div {margin: auto;height: 160px; width: 30%; background-color: powderblue;text-align: center;}
+</style> -->
 <body>
     <h1 >BILL CALCULATOR</h1>
-    <br><br><br>
-    <center>
-    <label for="item_Type : " > Item Type : </label>
-    <input type="text" id = "item_Type" placeholder="Enter Either Gold or Silver"><br><br>
-
-    <label for="lines_Used">Lines Used : </label>
-    <input type="number" id ="lines_Used"><br><br>
-
-    <label for="minutes">Minutes Used : </label>
-    <input type="number" id ="minutes_Used"><br><br>
-
-    <button type="submit" id="calculate_Bill">Calculate Bill</button>
-    
     <br><br>
+    <div class = "formDiv">
+        <form>
+            <label for="gold" > Gold(1000 mins) </label>
+            <input type="radio" name = "type" id = "gold" value="Gold"><br>
+            <label for="silver" > Silver(500 mins) </label>
+            <input type="radio" name = "type" id = "silver" value="Silver"><br>
 
-    <p id ="output_field"></p>
-    </center>
+            <label for="lines_Used">Additional Lines: </label>
+            <select name="lines_Used" id="lines_Used">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+            </select>
+            <br>
+
+            <label for="minutes">Additional Minutes: </label>
+            <input type="text" id ="minutes_Used" size="1"><br>
+
+            <button type="submit" id="calculate_Bill">Calculate Total</button><br><br>
+
+            <label for="total">Total $:</label>
+            <input type="text" id="result_Box" disabled>
+        </form>
+    </div>
 
     <script type = 'module' src = './frontend.js'></script>    
 </body>
