@@ -4,6 +4,12 @@ const totalAmount = document.querySelector('.totalAmount');
 const getAdditionalPlanMinutes = document.querySelector('.AdditionalMinutes');
 const getAdditionalPlanLines = document.querySelector('.AdditionalLines');
 
+for(let i = 1; i <= 6; i++){
+    const option = document.createElement('option');
+    option.value = option.textContent = i;
+    getAdditionalPlanLines.append(option);
+}
+
 const btn = document.querySelector('.submitButton');
 
 btn.addEventListener('click', () => {
