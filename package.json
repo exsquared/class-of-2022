@@ -1,0 +1,30 @@
+{
+  "name": "com.exsquared.class.2021.tdd",
+  "version": "1.0.0",
+  "description": "TDD Greeting Exercise",
+  "main": "index.js",
+  "jest": {
+    "testPathIgnorePatterns": [
+      "archive"
+    ]
+  },
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/exsquared/class-of-2021.git"
+  },
+  "author": "Sahil Dhawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/exsquared/class-of-2021/issues"
+  },
+  "homepage": "https://github.com/exsquared/class-of-2021#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^26.6.3",
+    "jest": "^26.6.3"
+  }
+}
