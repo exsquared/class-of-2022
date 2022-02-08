@@ -107,6 +107,31 @@ describe("index.js", () => {
             expect(price).toBe(expectedAmount);
         })
 
+        it("Should return an abnormal value if additional lines is passed something other than integer.", () => {
+            const expectedAmount = -1;
+            const type = "gold";
+            const additional_lines = true;
+            const price = calculate(type, additional_lines);
+            expect(price).toBe(expectedAmount);
+        })
+
+        it("Should return an abnormal value if additional lines is passed something other than integer.", () => {
+            const expectedAmount = -1;
+            const type = "gold";
+            const additional_lines = "abc";
+            const price = calculate(type, additional_lines);
+            expect(price).toBe(expectedAmount);
+        })
+
+        it("Should return an abnormal value if minutes used is passed something other than integer.", () => {
+            const expectedAmount = -1;
+            const type = "gold";
+            const additional_lines = 1;
+            const excess_minutes = true;
+            const price = calculate(type, additional_lines, excess_minutes);
+            expect(price).toBe(expectedAmount);
+        })
+
         it("Should return the silver base price even if we do not pass additional lines as well as excess minutes as in that case default value will be used, 1 and 0 respectively", () => {
             const expectedAmount = 29.95;
             const type = "Silver";

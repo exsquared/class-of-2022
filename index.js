@@ -17,6 +17,10 @@ function typeOfMaterial(index){
 
 function additonal_line_charges(index, additional_lines=1, excess_minutes =0){
 
+    if(isNaN(parseInt(additional_lines))){
+        return -1;
+    }
+
     if(additional_lines <= 0 ){
         return -1;
     }
@@ -37,6 +41,10 @@ function discounted_price(index, additional_lines=1){
 }
 
 function excess_minutes_charges_as_per_type(index,  excess_minutes=0){
+
+    if(isNaN(parseInt(excess_minutes))){
+        return -1;
+    }
 
     if(excess_minutes < 0){
         return -1;
