@@ -41,15 +41,15 @@ export function calculateBill(planType,lines=1,mins=0){
     
 }
 
-function whenNoAdditionalLinesButHaveExtraMinutes(planType,totalExtraMinutes,calculatedBillForGold,calculatedBillForSilver){
+export function whenNoAdditionalLinesButHaveExtraMinutes(planType,totalExtraMinutes,calculatedBillForGold,calculatedBillForSilver){
     return planType==="Gold" ? roundNumber((totalExtraMinutes*0.45) + calculatedBillForGold) : roundNumber((totalExtraMinutes*0.54) + calculatedBillForSilver);
 }
 
-function whenNoAdditionalLinesAndNoExtraMinutes(planType,calculatedBillForGold,calculatedBillForSilver){
+export function whenNoAdditionalLinesAndNoExtraMinutes(planType,calculatedBillForGold,calculatedBillForSilver){
     return    planType==="Gold" ? roundNumber(calculatedBillForGold) : roundNumber(calculatedBillForSilver);
 }
 //costPerLine gold:14.50, 21.50
-function costPerLine(planType){
+export function costPerLine(planType){
     return planType==="Gold" ? 14.50 : 21.50;
 }
 export function extraMinutes(planType,mins){
@@ -67,6 +67,6 @@ export function checkMinutesAreExtraOrNot(planType,mins){
 }
 
 
-function roundNumber(number){
+export function roundNumber(number){
     return Math.round(number * 100) / 100;
 }
