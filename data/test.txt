@@ -1,0 +1,1 @@
+from Twenty20, with {test} each team batting kenny's
