@@ -191,43 +191,43 @@ describe("Test Case for Calculating Phone Bill TOD", () => {
         });
     });
     describe("hasPlanMinutesExceeded()", () => {
-        it("Should return boolean if user has excess minutes.", () => {
+        it("Should return boolean true if user has Gold plan and more than 1000 mins.", () => {
             const boolVal = hasPlanMinutesExceeded("Gold", 1011);
             expect(boolVal).toBe(true);
         });
-        it("Should return boolean if user has excess minutes.", () => {
+        it("Should return boolean true if user has Silver plan and more than 500 mins.", () => {
             const boolVal = hasPlanMinutesExceeded("Silver", 501);
             expect(boolVal).toBe(true);
         });
-        it("Should return boolean if user has excess minutes.", () => {
+        it("Should return boolean false if user has Gold plan and less than 1000 mins.", () => {
             const boolVal = hasPlanMinutesExceeded("Gold", 101);
             expect(boolVal).toBe(false);
         });
-        it("Should return boolean if user has excess minutes.", () => {
+        it("Should return boolean true if user has Silver plan and more than 500 mins.", () => {
             const boolVal = hasPlanMinutesExceeded("Silver", 51);
             expect(boolVal).toBe(false);
         });
     });
     describe("checkExcessMinuteRateByPlan()", () => {
-        it("Should return excess minutes rate.", () => {
+        it("Should return 0.45 when Gold plan is passed.", () => {
             const excessPlanRate = checkExcessMinuteRateByPlan("Gold");
             expect(excessPlanRate).toBe(0.45);
         });
-        it("Should return excess minutes rate.", () => {
+        it("Should return 0.54 when Silver plan is passed.", () => {
             const excessPlanRate = checkExcessMinuteRateByPlan("Silver");
             expect(excessPlanRate).toBe(0.54);
         });
     });
     describe("checkPlanRate()", () => {
-        it("Should return base rate.", () => {
+        it("Should return base rate of 49.95 if Gold plan is passed.", () => {
             const planRate = checkPlanRate("Gold");
             expect(planRate).toBe(49.95);
         });
-        it("Should return base rate.", () => {
+        it("Should return base rate of 29.95 if Silver plan is passed.", () => {
             const planRate = checkPlanRate("Silver");
             expect(planRate).toBe(29.95);
         });
-        it("Should return base rate.", () => {
+        it("Should return base rate of 0 when neither Gold or Silver plan is passed.", () => {
             const planRate = checkPlanRate();
             expect(planRate).toBe(0);
         });
