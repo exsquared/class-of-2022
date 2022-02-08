@@ -3,7 +3,7 @@ export { preProcess };
 function preProcess(text) {
     text = text.toLowerCase();
     text = text.replace(/'s/g, '');
-    text = text.replace(/[^a-zA-Z0-9 ]/g, ' ');
+    text = text.replace(/[^a-zA-Z0-9- ]/g, ' ');
     text = text.replace(/\s+/g, ' ').trim();
     if (text === '')
         return '';

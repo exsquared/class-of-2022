@@ -1,6 +1,7 @@
 import { preProcess } from './textProcessing.js';
+export { displayFrequencyOfEachWord, readFile };
 
-export function displayFrequencyOfEachWord(path) {
+function displayFrequencyOfEachWord(path) {
     const text = readFile(path);
     if (text === -1) {
         return 'file does not exists.';
