@@ -7,7 +7,10 @@ const silverExtraMinutePrice = 0.54;
 
 
 export function calculate(planType, numberOfLines, numberOfMinutes) {
+  numberOfLines = parseInt(numberOfLines);
+  numberOfMinutes = parseInt(numberOfMinutes);
   if(checkInputValidity(planType, numberOfLines, numberOfMinutes)) return "improper inputs";
+  
     let totalRent = 0;
     planType = planType.toLowerCase();
         if (planType != "gold" && planType != "silver"){

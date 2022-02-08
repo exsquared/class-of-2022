@@ -52,17 +52,17 @@ describe("index.test.js", () => {
     })
     it("Should tell improper input if number of lines is not a number", () => {
       const planType = "silver";
-      const numberOfLines = "two";
+      const numberOfLines = "lines";
       const numberOfMinutes = 100;
       const myBill = calculate(planType, numberOfLines, numberOfMinutes);
       expect(myBill).toBe("improper inputs");
     })
-    it("Should tell improper input if number of minutes is not a number", () => {
-      const planType = "silver";
-      const numberOfLines = 2;
-      const numberOfMinutes = "hundred";
+    it("Should tell output if number of minutes is a number passed as string", () => {
+      const planType = "gold";
+      const numberOfLines = 1;
+      const numberOfMinutes = "0";
       const myBill = calculate(planType, numberOfLines, numberOfMinutes);
-      expect(myBill).toBe("improper inputs");
+      expect(myBill).toBe(49.95);
     })
     it("Should calculate the phone bill for Gold", () => {
       const planType = "Gold";
