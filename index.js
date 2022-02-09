@@ -1,4 +1,4 @@
-let path = './data/example.txt';
+let path = './data/cricket.txt';
 function wordFrequencyCount(path) {
     let file = readFile(path);
     let text = preprocessFile(file);
