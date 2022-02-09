@@ -26,9 +26,10 @@ export function mainFunction(outputString){
         storeInMap(countStore, string);
     }
     const mapSort1 = new Map([...countStore.entries()].sort((a, b) => a[1] - b[1]));
+    // console.log(mapSort1)
     let answerString = '';
     for(let [key, value] of mapSort1){
-        answerString+=key + value
+        answerString+=key + '->' + value + ' ';
     }
     return answerString;
 }

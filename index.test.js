@@ -23,6 +23,7 @@ describe("index.js", ()=>{
         it("Should handle the empty text file", ()=>{
             const filePath = 'input.txt';
             const output = handleFile(filePath);
+            console.log(output);
             expect(output).toBe('The file is empty.');
         })
     })
@@ -31,17 +32,17 @@ describe("index.js", ()=>{
         it("Should return the correct string for general input file", ()=>{
             const inputString = 'Munish Kumar Garg';
             const output = mainFunction(inputString);
-            expect(output).toBe('munish1kumar1garg1');
+            expect(output).toBe('munish->1 kumar->1 garg->1 ');
         })
         it("Should handle the excessive white spaces and special characters", ()=>{
             const inputString = 'my @ name is     munish . garg $$$$ garg.';
             const output = mainFunction(inputString);
-            expect(output).toBe('my1name1is1munish1garg2');
+            expect(output).toBe('my->1 name->1 is->1 munish->1 garg->2 ');
         })
         it("Should return the string with output in ascending order", ()=>{
             const inputString = 'munish munish garg 2022...'
             const output = mainFunction(inputString);
-            expect(output).toBe('garg120221munish2');
+            expect(output).toBe('garg->1 2022->1 munish->2 ');
         })
     })
 })
