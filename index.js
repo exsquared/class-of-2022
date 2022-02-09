@@ -24,6 +24,7 @@ function preprocessFile(file) {
         return 0;
     }
     let reg = /\W+/g;
+    file = file.replace(/'s/, "");
     let text = file.replaceAll(reg, " ").trim().toLowerCase();
     return text;
 
