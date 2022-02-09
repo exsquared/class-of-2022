@@ -23,7 +23,7 @@ export function mapToString(frequencyMap){
         concatString += `${key}:${value}, `
     }
 
-    console.log(concatString.slice(0, -2));
+    //console.log(concatString.slice(0, -2));
 
     return concatString.slice(0, -2);
 }
@@ -52,6 +52,7 @@ export function countWordFrequency(data){
 
 export function preprocessData(data){
     data = data.replaceAll(/[0-9]+/g, '');
+    data = data.replaceAll("'s", '');
     data = data.replaceAll("'", '');
     data = data.replaceAll(/\W+/g, ' ').trim().toLowerCase();
 
