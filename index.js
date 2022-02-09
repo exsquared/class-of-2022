@@ -27,7 +27,7 @@ export function mapToString(frequencyMap){
 }
 
 export function sortWordFrequencyCount(wordFrequencyCount){
-  let sortedFrequencyMap = new Map([...wordFrequencyCount.entries()].sort((a, b) => a[1] - b[1]));
+  let sortedFrequencyMap = new Map([...wordFrequencyCount.entries()].sort((a, b) => b[1] - a[1]));
   return sortedFrequencyMap;
 }
 
@@ -50,6 +50,8 @@ export function countWordFrequency(data){
 
 export function preprocessData(data){
   data = data.replaceAll(/\W+/g, ' ').trim().toLowerCase();
+  data = data.replaceAll(/[0-9]/g,' ');
+  data = data.replace(/\s+/g, ' ').trim();
 
   return data;
 }
@@ -65,3 +67,6 @@ export function readInputFile(file){
 
   return rawData; 
 }
+
+
+//console.log(sortTextByFrequency("./data/rainbow.txt",1));
