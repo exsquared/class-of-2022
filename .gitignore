@@ -100,3 +100,4 @@ Others
 .babelrc
 tsconfig.json
 jest.config.js
+babel.config.js
