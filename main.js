@@ -1,6 +1,7 @@
 export {readFile, countFrequecyOfWords, preProcess, wordFreq, sort, printMap};
 
 const fileAddress = './data/cricket.txt';
+const fileAddress2 = './data/rainbow.txt';
 
 function readFile(fileAddress){
     if(!fileAddress){
@@ -28,12 +29,17 @@ function countFrequecyOfWords(fileAddress){
 
     const sortedFrequencyMap = sort(frequencyMap);
 
-    return (printMap(sortedFrequencyMap));
+    // console.log(sortedFrequencyMap);
+
+    // let arr = 
+    return printMap(sortedFrequencyMap);
+    // arr = arr.slice(0, -1);
+    // console.log(arr.length)
 
 }
 
-// const solString = countFrequecyOfWords(fileAddress);
-// console.log(solString);
+const solString = countFrequecyOfWords(fileAddress);
+console.log(solString);
 
 
 
@@ -43,7 +49,7 @@ function preProcess(text){
         return 0;
     }
 
-    text = text.toLowerCase().replace(/'s/g, "").replace(/[^a-z0-9]/g," ").replace(/\s+/g, " ");
+    text = text.toLowerCase().replace(/'s/g, "").replace(/[^a-z]/g," ").replace(/\s+/g, " ").trim();
     
     return text;
 }
@@ -69,7 +75,7 @@ function wordFreq(string) {
 }
 
 function sort(frequencyMap){
-    return (!frequencyMap) ? 0 :new Map([...frequencyMap.entries()].sort((a, b) => a[1] - b[1]));
+    return (!frequencyMap) ? 0 :new Map([...frequencyMap.entries()].sort((a, b) => b[1] - a[1]));
 }
 
 function printMap(map){

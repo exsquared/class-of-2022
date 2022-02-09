@@ -32,7 +32,7 @@ describe("main.js", () => {
             expect(receivedResult).toBe(expectedResult);
         })
         it("should return preprocessed text with all the punctuations values removed.", () => {
-            const expectedResult = "this is a text file including several punctuations and the pre process function should be able to remove all these punctuations as these are not at all necessary to our problem statement ";
+            const expectedResult = "this is a text file including several punctuations and the pre process function should be able to remove all these punctuations as these are not at all necessary to our problem statement";
             const text = "This ) _ - is a + = text file including ` ~ several punctuations and {   [  ]  }  \ | \" : \' ; the pre process function should be & * (able to ^ remove all % these punctuations # as these are $ not at all @ necessary to our ! problem statement.";
             const receivedResult = preProcess(text);
             expect(receivedResult).toBe(expectedResult);
@@ -46,7 +46,7 @@ describe("main.js", () => {
         })
 
         it("should return preprocessed data removing specail charcters, trailing spaces, uppercase letter and so on.", () => {
-            const expectedResult = " hello world finally done ";
+            const expectedResult = "hello world finally done";
             const text = "'!\"#$%&'()*+,-./:;<=>?@[\]^_`{|}~' HELLO world    finally DOne !"
             const receivedResult = preProcess(text);
             expect(receivedResult).toBe(expectedResult);
@@ -74,7 +74,7 @@ describe("main.js", () => {
             expect(receivedResult).toBe(expectedResult);
         })
         it("should return a sorted hash map according to their word frequency.", () => {
-            const expectedResult = "this:1 is:1 file:1 repeated:1 containing:2 words:2 a:4 ";
+            const expectedResult = "a:4 containing:2 words:2 this:1 is:1 file:1 repeated:1 ";
             const text = "this is a a a a file containing containing repeated words words";
             const receivedResult = printMap(sort(wordFreq(text)));
             expect(receivedResult).toBe(expectedResult);
@@ -128,7 +128,7 @@ describe("main.js", () => {
         })
 
         it("Should return 0 with file with only special characters or trailing spaces",()  =>{
-            const expectedResult = "";
+            const expectedResult = 0;
             const address = "./data/testfile3.txt";
             const receivedResult = countFrequecyOfWords(address);
             expect(receivedResult).toBe(expectedResult);
