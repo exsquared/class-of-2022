@@ -1,4 +1,4 @@
-export function countWordFrequency(file, fileType = 0){
+ export function countWordFrequency(file, fileType = 0){
     if(file == null || file == '' || file == undefined){
         return 0;
     }
@@ -8,10 +8,17 @@ export function countWordFrequency(file, fileType = 0){
     }
     let processedData = processData(rawData);
     let frequencyMap = createFrequencyMapFromWords(processedData);
-    return frequencyMap;
+    let outputStr = mapToString(frequencyMap);
+    return outputStr;
 }
 
-
+export function mapToString(frequencyMap){
+    let concatString = ''
+    for(const [key, value] of frequencyMap.entries()){
+        concatString += `${key}:${value}, `
+    }
+    return concatString.slice(0, -2);
+}    
 export function createFrequencyMapFromWords(words) {
     let frequencyMap = new Map();
     for (const word of words) {
@@ -21,14 +28,15 @@ export function createFrequencyMapFromWords(words) {
             frequencyMap.set(word, 1);
         }
     }
-    let sortedFrequencyMap = new Map([...frequencyMap.entries()].sort((a, b) => a[1] - b[1]));
+    let sortedFrequencyMap = new Map([...frequencyMap.entries()].sort((a, b) => b[1] - a[1]));
    return(sortedFrequencyMap);
 }
 export function processData(text){
     text = text.toLowerCase();
-    text = text.replace(/'s/g, '');
-    text = text.replace(/[^a-zA-Z0-9 ]/g, ' ');
-    text = text.replace(/\s+/g, ' ').trim();
+    text = text.replaceAll(/'s/g, '');
+    text = text.replaceAll(/[^a-zA-Z0-9 ]/g, ' ');
+    text = text.replaceAll(/[0-9]/g, '');
+    text = text.replaceAll(/\s+/g, ' ').trim();
     const words = text.split(' ');
 
     return words;
@@ -41,5 +49,5 @@ export function readInputFile(file){
     let rawData = fs.readFileSync(file).toString();
     return rawData;
 }
-
+console.log(countWordFrequency("./data/rainbow.txt",1));
 
