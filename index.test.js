@@ -118,7 +118,7 @@ describe("Test Case for Finding Word Frequency TOD", () => {
         });
     });
     describe("sortWordFrequencyCount()", () => {
-        it("Should return empty array if input is empty string. test", () => {
+        it("Should return sorted Map if a map is passed.", () => {
             const inputFile = new Map();
             inputFile.set('from', 1);
             inputFile.set('what', 2);
