@@ -2,11 +2,13 @@ import {storeInMap} from './storeinmap'
 import {calculationFunction} from './calculationfunction'
 export function tfidfCalculator(arr){
     //This is the main function which would be called for handling the td-idf...
+    //It will accept the array of paths for the text files...
     let fs = require('fs');
     let collectionOfMaps = [];
     for(let itr of arr){
         const filePath = itr;
         let outputString = fs.readFileSync(filePath).toString();
+        //mainFunction will return the map of word count for each text file...
         const mapOutput = mainFunction(outputString);
         collectionOfMaps.push(mapOutput);
     }
