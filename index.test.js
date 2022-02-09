@@ -48,6 +48,13 @@ describe("Test Case for Finding Word Frequency TOD", () => {
             const receivedOutput = sortTextByFrequency(inputFile, inputFileType);
             expect(receivedOutput).toBe(expectedOutput);
         });
+        it("Should return 0 if valid inputFile path is provided, but file is empty.", () => {
+            const inputFile = "data/test-empty.txt";
+            const inputFileType = 1;
+            const expectedOutput = 0;
+            const receivedOutput = sortTextByFrequency(inputFile, inputFileType);
+            expect(receivedOutput).toBe(expectedOutput);
+        });
     });
     describe("readInputFile()", () => {
         it("Should return null if inputFile is not given.", () => {
