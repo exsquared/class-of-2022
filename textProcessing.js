@@ -1,4 +1,4 @@
-export { preProcess };
+export { preProcess, sortMap, createFrequencyMapFromWords, createWordFrequencyPair };
 
 function preProcess(text) {
     text = text.toLowerCase();
@@ -9,11 +9,10 @@ function preProcess(text) {
         return '';
 
     const words = text.split(' ');
-    const sortedFrequencyMap = createSortedFrequencyMapFromWords(words);
-    return createWordFrequencyPair(sortedFrequencyMap);
+    return words;
 }
 
-function createSortedFrequencyMapFromWords(words) {
+function createFrequencyMapFromWords(words) {
     let frequencyMap = new Map();
     for (const word of words) {
         if (frequencyMap.has(word)) {
@@ -22,8 +21,12 @@ function createSortedFrequencyMapFromWords(words) {
             frequencyMap.set(word, 1);
         }
     }
-    let sortedFrequencyMap = new Map([...frequencyMap.entries()].sort((a, b) => b[1] - a[1]));
-    return sortedFrequencyMap;
+    return frequencyMap;
+}
+
+function sortMap(map) {
+    let sortedMap = new Map([...map.entries()].sort((a, b) => b[1] - a[1]));
+    return sortedMap;
 }
 
 function createWordFrequencyPair(sortedFrequencyMap) {
