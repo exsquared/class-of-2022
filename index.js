@@ -25,6 +25,12 @@ function sortTextByFrequency(file, dir, fileType = 0){
         return 0;
     }
 
+    const fs = require('fs');
+
+    if(!fs.existsSync(dir)){
+        return null;
+    }
+
     let processedDataArray = []
 
     let getAllFiles = getAllFileNamesInDirectory(dir);
