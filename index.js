@@ -42,19 +42,8 @@ function sortTextByFrequency(file, dir, fileType = 0){
         requiredFileTFIDFMap.set(key, calculateTFIDF(key, requiredFileMap, processedDataArray, dir));
     }
 
-    console.log(sortWordFrequencyCount(requiredFileTFIDFMap));
-
-    /*if(rawData == '' || rawData == null){
-        return 0;
-    }*/
-
-    
-    /*let processedData = preprocessData(rawData);
-    let wordFrequencyCount = countWordFrequency(processedData);
-    let sortedWordFrequencyCount = sortWordFrequencyCount(wordFrequencyCount);
-    let stringsortedWordFrequencyCount = mapToString(sortedWordFrequencyCount);*/
-
-    //return stringsortedWordFrequencyCount;
+    //console.log(sortWordFrequencyCount(requiredFileTFIDFMap));
+    return sortWordFrequencyCount(requiredFileTFIDFMap).keys().next().value;
 }
 
 function processData(file){
@@ -138,7 +127,7 @@ function mapToString(frequencyMap){
 }
 
 function sortWordFrequencyCount(wordFrequencyCount){
-    let sortedFrequencyMap = new Map([...wordFrequencyCount.entries()].sort((a, b) => a[1] - b[1]));
+    let sortedFrequencyMap = new Map([...wordFrequencyCount.entries()].sort((a, b) => b[1] - a[1]));
     return sortedFrequencyMap;
 }
 
