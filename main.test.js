@@ -1,6 +1,4 @@
-import { expect, it } from "@jest/globals";
-
-import { readFile, countFrequecyOfWords, preProcess, wordFreq, sort, printMap } from "./main.js"
+import {wordFreq, readFile, countFrequecyOfWords, preProcess,  sort, printMap} from './Utility.js'
 
 describe("main.js", () => {
 
@@ -22,6 +20,7 @@ describe("main.js", () => {
             const receivedResult = readFile(address);
             expect(receivedResult).toBe(expectedResult);
         })
+        
     })
 
     describe("preProcess function Testing", () => {
