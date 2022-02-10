@@ -45,7 +45,7 @@ function findIDFofTargetDocument(targetPath) {
                 NumberOfDocumentsWithTerm += 1;
             }
         }
-        IDFofTargetDocument[word] = Math.log(totalNumberOfDocuments/(NumberOfDocumentsWithTerm + 1));
+        IDFofTargetDocument[word] = Math.log((totalNumberOfDocuments)/(NumberOfDocumentsWithTerm + 1));
     }
 return IDFofTargetDocument;
 }
@@ -138,6 +138,10 @@ function sortResultByCount(countedObject) {
     //console.log(sortedObject);
     return sortedObject;
 }
- console.log(findTDIDFOfTargetDocument(path1));
+let targetPath = './data/elon-musk.txt';
+let result = (findTDIDFOfTargetDocument(targetPath));
+let sortedResult = (sortResultByCount(result));
+console.log(Object.entries(sortedResult)[0]);
+
 
 
