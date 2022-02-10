@@ -1,11 +1,11 @@
-
-path1 = "./data/rainbow.txt";
-path2 = "./data/algorithm.txt";
-path3 = "./data/cricket.txt";
-path4 = "./data/elon-musk.txt";
-path5 = "./data/poet.txt";
-path6 = "./data/telegram.txt";
-path7 = "./data/thermodynamics.txt";
+export {wordCounterofDocuments, findTDIDFOfTargetDocument, findIDFofTargetDocument, findTermFrequencyofTargetDocument, readFile, preprocessFile, frequencyCounter, sortResultByCount, wordFrequencyCount};
+let path1 = "./data/rainbow.txt";
+let path2 = "./data/algorithm.txt";
+let path3 = "./data/cricket.txt";
+let path4 = "./data/elon-musk.txt";
+let path5 = "./data/poet.txt";
+let path6 = "./data/telegram.txt";
+let path7 = "./data/thermodynamics.txt";
 
 let collectionOfDocumentsPath=[];
 collectionOfDocumentsPath.push(path1, path2, path3, path4, path5, path6, path7);
@@ -14,6 +14,9 @@ let wordFrequencyCountOfDocuments = wordCounterofDocuments(collectionOfDocuments
 //console.log(wordFrequencyCountOfDocuments);
 
 function wordCounterofDocuments(collectionOfDocumentsPath){
+    if (!collectionOfDocumentsPath) {
+        return 0;
+    }
     let  wordFrequencyCountOfDocuments = [];
     for (let path of collectionOfDocumentsPath) {
         wordFrequencyCountOfDocuments.push(wordFrequencyCount(path));
@@ -22,6 +25,9 @@ return wordFrequencyCountOfDocuments;
 }
 
 function findTDIDFOfTargetDocument(targetPath) {
+    if (!targetPath) {
+        return 0;
+    }
     let wordFrequency = wordFrequencyCount(targetPath);
     let finalTDIDF = {};
     let TDOfTargetDocument = findTermFrequencyofTargetDocument(targetPath);
@@ -34,6 +40,9 @@ return finalTDIDF;
 }
 
 function findIDFofTargetDocument(targetPath) {
+    if (!targetPath) {
+        return 0;
+    }
     let NumberOfDocumentsWithTerm = 0;
     let wordFrequency = wordFrequencyCount(targetPath);
     let IDFofTargetDocument = {}; 
@@ -51,6 +60,9 @@ return IDFofTargetDocument;
 }
 
 function findTermFrequencyofTargetDocument(targetPath) {
+    if (!targetPath) {
+        return 0;
+    }
     let wordFrequency = wordFrequencyCount(targetPath);
     let termFrequencyofTargetDocument = {};
     let totalNumberOfTerms = 0;
