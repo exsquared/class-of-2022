@@ -67,7 +67,6 @@ function termFrequency(word, documentFrequencyMap){
 }
 
 function inverseDocumentFrequency(frequencyMapArray, word, dir){
-    word = preprocessData(word);
     
     let documentFrequency = getTotalNumberOfDocumentsIWhichWordExists(frequencyMapArray, word);
     let totalDocuments = getTotalNumberOfDocuments(dir);
