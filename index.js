@@ -44,7 +44,7 @@ export function calculateIdf(arrays,MapWord,tf){
         }
 
     }
-    let idf = Math.log2((arrays.length+1)/(idfCount+1));
+    let idf = Math.log2((arrays.length)/(idfCount+1));
     
     return tf*idf;
 }
@@ -86,8 +86,8 @@ export function readInputFile(file){
     let rawData = fs.readFileSync(file).toString();
     return rawData;
 }
-console.log(countWordFrequency("./data/rainbow.txt",1));
- //let arrays = ['./data/algorithm.txt','./data/cricket.txt','./data/elon-musk.txt','./data/poet.txt','./data/telegram.txt','./data/thermodynamics.txt'];
+console.log(countWordFrequency("./data/cricket.txt",1));
+ //let arrays = ['./data/algorithm.txt','./data/cricket.txt','./data/elon-musk.txt','./data/poet.txt','./data/telegram.txt','./data/thermodynamics.txt','./data/rainbow.txt];
 
 
 // function iterateAllTextFiles(arrays){
