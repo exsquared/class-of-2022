@@ -1,53 +1,45 @@
 import {storeInMap} from './storeinmap'
 import {calculationFunction} from './calculationfunction'
-export function tfidfCalculator(arr){
-    //This is the main function which would be called for handling the td-idf...
-    //It will accept the array of paths for the text files...
+
+export function tfidfCalculator(inputFilePath=null){
     let fs = require('fs');
+    if(inputFilePath == null && !fs.existsSync(inputFilePath))
+        return -1;
+    let arr = ['./data/algorithm.txt','./data/cricket.txt','./data/elon-musk.txt','./data/poet.txt','./data/telegram.txt','./data/thermodynamics.txt'];
     let collectionOfMaps = [];
     for(let itr of arr){
         const filePath = itr;
         let outputString = fs.readFileSync(filePath).toString();
-        //mainFunction will return the map of word count for each text file...
-        const mapOutput = mainFunction(outputString);
+        const mapOutput = countMapGenerator(outputString);
         collectionOfMaps.push(mapOutput);
     }
-    return calculationFunction(collectionOfMaps);
+    let finalMap =  calculationFunction(collectionOfMaps, inputFilePath);
+    let finalMapSorted = new Map([...finalMap.entries()].sort((a, b) => b[1]-a[1]));
+    return finalMapSorted.keys().next().value;
 }
 
 
-function mainFunction(outputString){
-    //This function is responsible for generating a map containing the count of each word in the document...
+export function countMapGenerator(outputString){
     let countStore = new Map();
     let i=-1, j=0;
     while(j < outputString.length){
         if((outputString.charCodeAt(j)>=97 && outputString.charCodeAt(j)<=122) || (outputString.charCodeAt(j)>=65 && outputString.charCodeAt(j)<=90)){
-            //If uppercase or lowercase or any number is encountered....
             i = (i == -1) ? j : i;
         }
         else if(i!=-1){
-            //It means that if the delimiter is encountered and the i stores the index of the first character....
             let string = outputString.substring(i, j);
             string = string.toLowerCase();
             i = -1;
-            // console.log(string);
             storeInMap(countStore, string);
         }
         j++;
     }
-    //This if condition is to handle the edge case....
     if(i!=-1){
         let string = outputString.substring(i, j);
         string = string.toLowerCase();
         i = -1;
-        // console.log(string);
         storeInMap(countStore, string);
     }
-    const mapSort1 = new Map([...countStore.entries()].sort((a, b) => b[1]-a[1]));
-    return mapSort1;
+    return countStore;
 }
-
-// let arr = ['./data/algorithm.txt','./data/cricket.txt','./data/elon-musk.txt','./data/poet.txt','./data/telegram.txt','./data/thermodynamics.txt'];
-
-// let collectionOfMaps = tfidfCalculator(arr);
 

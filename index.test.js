@@ -1,6 +1,7 @@
 import {supportingFunction} from './index';
 import {handleFile} from './handlefile';
 import {mainFunction} from './mainfunction'; 
+import {tfidfCalculator} from './tfidf.js';
 describe("index.js", ()=>{
     describe("supportingFunction", ()=>{
         it("Should return -1 if no argument is passed",()=>{
@@ -44,6 +45,24 @@ describe("index.js", ()=>{
             const inputString = 'munish munish garg 2022...'
             const output = mainFunction(inputString);
             expect(output).toBe('munish->2 garg->1 ');
+        })
+    })
+
+    describe("tfidfCalculator", ()=>{
+        it("should handle the case when no path is passed.", ()=>{
+            const output = tfidfCalculator();
+            expect(output).toEqual(-1);
+        })
+
+        it("Should handle the case when the wrong file path is passed.", ()=>{
+            const output = tfidfCalculator();
+            expect(output).toEqual(-1);
+        })
+
+        it("Should return the correct keyword for the correct file path", ()=>{
+            const filePath = './data/rainbow.txt';
+            const output = tfidfCalculator(filePath);
+            expect(output).toBe('rainbow');
         })
     })
 })
