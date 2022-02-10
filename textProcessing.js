@@ -3,7 +3,7 @@ export { preProcess };
 function preProcess(text) {
     text = text.toLowerCase();
     text = text.replace(/'s/g, '');
-    text = text.replace(/[^a-zA-Z0-9- ]/g, ' ');
+    text = text.replace(/[^a-zA-Z ]/g, ' ');
     text = text.replace(/\s+/g, ' ').trim();
     if (text === '')
         return '';
@@ -22,7 +22,7 @@ function createSortedFrequencyMapFromWords(words) {
             frequencyMap.set(word, 1);
         }
     }
-    let sortedFrequencyMap = new Map([...frequencyMap.entries()].sort((a, b) => a[1] - b[1]));
+    let sortedFrequencyMap = new Map([...frequencyMap.entries()].sort((a, b) => b[1] - a[1]));
     return sortedFrequencyMap;
 }
 
