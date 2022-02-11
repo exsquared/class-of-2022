@@ -3,7 +3,7 @@ import {calculationFunction} from './calculationfunction'
 
 export function tfidfCalculator(inputFilePath=null){
     let fs = require('fs');
-    if(inputFilePath == null && !fs.existsSync(inputFilePath))
+    if(inputFilePath == null || !fs.existsSync(inputFilePath))
         return -1;
     let arr = ['./data/algorithm.txt','./data/cricket.txt','./data/elon-musk.txt','./data/poet.txt','./data/telegram.txt','./data/thermodynamics.txt'];
     let collectionOfMaps = [];

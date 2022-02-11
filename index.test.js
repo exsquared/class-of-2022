@@ -22,7 +22,7 @@ describe("index.js", ()=>{
 
     describe("handleFile", ()=>{
         it("Should handle the empty text file", ()=>{
-            const filePath = 'input.txt';
+            const filePath = './data/input.txt';
             const output = handleFile(filePath);
             // console.log(output.split(' ').length)
             // console.log(output);
@@ -55,7 +55,14 @@ describe("index.js", ()=>{
         })
 
         it("Should handle the case when the wrong file path is passed.", ()=>{
+            const inputFilePath = './dataaa/input.txt'
             const output = tfidfCalculator();
+            expect(output).toEqual(-1);
+        })
+
+        it("Should handle the empty string", ()=>{
+            const inputFilePath = '';
+            const output = tfidfCalculator(inputFilePath);
             expect(output).toEqual(-1);
         })
 
