@@ -1,5 +1,9 @@
-export {readFile, countFrequecyOfWords, preProcess, wordFreq, sort, printMap};
-import {sort, printMap, wordFreq, loadFileContents, filesInformationContainer, readFile, filesContainer, fileAddressBeginning, preProcess, countFrequecyOfWords, termFrequency, tf_idfMapCreate, countdf} from './Utility.js'
+export { solution};
+import {tf_idfMapCreate, countdf, termFrequency} from './tf_idf.js';
+
+import { preProcess, sort, readFile } from './wordFrequencyCounter.js';
+
+import {loadFileContents, filesInformationContainer, filesContainer} from './textFilesProcessing';
 
 const fileAddress = './data/cricket.txt';
 
@@ -13,8 +17,11 @@ function solution(textAsString){
     
     let tf_idfMap = tf_idfMapCreate(frequencyMap);
     
-    return sort(tf_idfMap);
+    return sort(tf_idfMap);  
+    // return sortedtf_idfMap.keys().next().value;
 }
 
-const solutionMap = solution(readFile(fileAddress));
-console.log(solutionMap.keys().next().value);
+const mostImportantWord = solution(readFile(fileAddress));
+
+console.log(mostImportantWord.keys().next().value);
+
