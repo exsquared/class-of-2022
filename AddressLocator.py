@@ -38,31 +38,28 @@ def extractMapLinks(all_URLs):
 
 def extractAddressFromMapLinks(urls):
     for url in urls:
-        if 'embed' in url:
-            if 'q' in url:
-                address = url.split('q=')[1].split('&')[0].replace('%20', ' ').replace('+', ' ').replace('%2C', ',').replace('%7C', '|')
+        if "embed" in url:
+            if "q" in url:
+                address = url.split("q=")[1].split("&")[0].replace("%20", " ").replace("+", " ").replace("%2C", ",").replace("%7C", "|")
                 return address
 
-            string = url.split('!2d')[1]
-            long = string.split('!3d')[0]
-            lat = string.split('!3d')[1].split('!2m')[0]
-            address = long + ', ' + lat
+            string = url.split("!2d")[1]
+            long = string.split("!3d")[0]
+            lat = string.split("!3d")[1].split("!2m")[0]
+            address = long + ", " + lat
             return address
 
-        elif('ll' in url and '3D' in url):
-            string = url.split('3D')[1]
-            temp_list = string.split(',')
+        elif("ll" in url and "3D" in url):
+            string = url.split("3D")[1]
+            temp_list = string.split(",")
             if(len(temp_list) == 2):
-                address = temp_list[0] + ', ' + temp_list[1]
+                address = temp_list[0] + ", " + temp_list[1]
                 return address       
       
-        elif('@' in url):
-            temp_string = url.split('@')[1].split(',')
-            address = temp_string[0] + ', ' + temp_string[1]
-            return address
-
-
-    return ''    
+        elif("@" in url):
+            temp_string = url.split("@")[1].split(',')
+            address = temp_string[0] + ", " + temp_string[1]
+            return address   
 
 all_URLs = extractLinks(readFile(path1))
 map_URLs = extractMapLinks(all_URLs)
