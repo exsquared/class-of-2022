@@ -12,7 +12,7 @@ path8=r"C:\Users\lsingh\Desktop\Webpages\Ranch Country Homes - Welcome!.mhtml"
 
 def readFile(path):
     with open(path) as file:
-        soup = BeautifulSoup(file, 'html.parser')
+        soup = BeautifulSoup(file, "html.parser")
         return soup.prettify()
 #         return str(soup)
 
@@ -24,16 +24,16 @@ def extractLinks(string):
  
 
 def extractMapLinks(all_URLs):
-    required_keywords_in_URLs = ['google.com/maps', 'maps.google.com', 'map.google.com']
+    required_keywords_in_URLs = ["google.com/maps", "maps.google.com", "map.google.com"]
     map_links = []
 
     for link in all_URLs:
         for keyword in required_keywords_in_URLs:
-            if keyword in link and 'https://www.google.com/maps/vt' not in link:
-                if(link[-2:] == ',=' or link[-2:] == "='"):
-                    map_links.append(link.replace('&amp;', '&')[:-2])
+            if keyword in link and "https://www.google.com/maps/vt" not in link:
+                if(link[-2:] == ",=" or link[-2:] == "='"):
+                    map_links.append(link.replace("&amp;", "&")[:-2])
                 else:
-                    map_links.append(link.replace('&amp;', '&'))
+                    map_links.append(link.replace("&amp;", "&"))
     return map_links
 
 def extractAddressFromMapLinks(urls):
