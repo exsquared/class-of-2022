@@ -12,7 +12,7 @@ path8=r"C:\Users\lsingh\Desktop\Webpages\Ranch Country Homes - Welcome!.mhtml"
 
 def readFile(path):
     with open(path) as file:
-        soup = BeautifulSoup(file, 'html.parser')
+        soup = BeautifulSoup(file, "html.parser")
         return soup.prettify()
 #         return str(soup)
 
@@ -24,45 +24,42 @@ def extractLinks(string):
  
 
 def extractMapLinks(all_URLs):
-    required_keywords_in_URLs = ['google.com/maps', 'maps.google.com', 'map.google.com']
+    required_keywords_in_URLs = ["google.com/maps", "maps.google.com", "map.google.com"]
     map_links = []
 
     for link in all_URLs:
         for keyword in required_keywords_in_URLs:
-            if keyword in link and 'https://www.google.com/maps/vt' not in link:
-                if(link[-2:] == ',=' or link[-2:] == "='"):
-                    map_links.append(link.replace('&amp;', '&')[:-2])
+            if keyword in link and "https://www.google.com/maps/vt" not in link:
+                if(link[-2:] == ",=" or link[-2:] == "='"):
+                    map_links.append(link.replace("&amp;", "&")[:-2])
                 else:
-                    map_links.append(link.replace('&amp;', '&'))
+                    map_links.append(link.replace("&amp;", "&"))
     return map_links
 
 def extractAddressFromMapLinks(urls):
     for url in urls:
-        if 'embed' in url:
-            if 'q' in url:
-                address = url.split('q=')[1].split('&')[0].replace('%20', ' ').replace('+', ' ').replace('%2C', ',').replace('%7C', '|')
+        if "embed" in url:
+            if "q" in url:
+                address = url.split("q=")[1].split("&")[0].replace("%20", " ").replace("+", " ").replace("%2C", ",").replace("%7C", "|")
                 return address
-
-            string = url.split('!2d')[1]
-            long = string.split('!3d')[0]
-            lat = string.split('!3d')[1].split('!2m')[0]
-            address = long + ', ' + lat
+            string = url.split("!2d")[1]
+            long = string.split("!3d")[0]
+            lat = string.split("!3d")[1].split("!2m")[0]
+            address = long + ", " + lat
             return address
-
-        elif('ll' in url and '3D' in url):
-            string = url.split('3D')[1]
-            temp_list = string.split(',')
+        elif("ll" in url and "3D" in url):
+            string = url.split("3D")[1]
+            temp_list = string.split(",")
             if(len(temp_list) == 2):
-                address = temp_list[0] + ', ' + temp_list[1]
+                address = temp_list[0] + ", " + temp_list[1]
                 return address       
-      
-        elif('@' in url):
-            temp_string = url.split('@')[1].split(',')
-            address = temp_string[0] + ', ' + temp_string[1]
+        elif("@" in url):
+            temp_string = url.split("@")[1].split(",")
+            address = temp_string[0] + ", " + temp_string[1]
             return address
 
 
-    return ''    
+    return ""    
 
 all_URLs = extractLinks(readFile(path1))
 map_URLs = extractMapLinks(all_URLs)
