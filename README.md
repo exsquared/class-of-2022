@@ -1,4 +1,3 @@
-# class-of-2022
 ## Coding Guidelines
  
 ### Editor
