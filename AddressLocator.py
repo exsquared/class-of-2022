@@ -21,8 +21,6 @@ def extractLinks(string):
     all_links = list(set(re.findall(regex, string)))
     return all_links
 
- 
-
 def extractMapLinks(all_URLs):
     required_keywords_in_URLs = ["google.com/maps", "maps.google.com", "map.google.com"]
     map_links = []
@@ -57,12 +55,9 @@ def extractAddressFromMapLinks(urls):
             temp_string = url.split("@")[1].split(",")
             address = temp_string[0] + ", " + temp_string[1]
             return address
-
-
     return ""    
 
 all_URLs = extractLinks(readFile(path1))
 map_URLs = extractMapLinks(all_URLs)
 address = extractAddressFromMapLinks(map_URLs)
-
 print (address)
