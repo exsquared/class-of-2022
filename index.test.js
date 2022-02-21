@@ -1,5 +1,6 @@
 import { findBy } from "./findBy.js";
 import { readJsonFile } from "./readJsonFile.js";
+import { where } from "./where.js";
 describe("index.js", () => {
   ///// Test cases written for readJsonFile()
   describe("ReadJsonFile() in readJsonFile.js (Desc: Read json file provided)", () => {
@@ -52,6 +53,7 @@ describe("index.js", () => {
     });
   });
 
+  /////////Test written for findBy function
   describe("findBy() in findBy.js", () => {
     it("if no parameter is passed", () => {
       const result = findBy();
@@ -152,6 +154,38 @@ describe("index.js", () => {
       };
       const result = findBy(obj);
       expect(result).toBe(-1);
+    });
+  });
+
+  ///////Test for where function
+  describe("where()in where.js", () => {
+    it("If no parameters are passed", () => {
+      const result = where();
+      expect(result).toBe(-1);
+    });
+    it("if empty object is passed", () => {
+      const obj = {};
+      const result = where(obj);
+      expect(result).toBe(-1);
+    });
+    it("if null is passed in object", () => {
+      const obj = { null: null };
+      const result = where(obj);
+      expect(result).toBe(-1);
+    });
+    it("if object is not passed as parameter", () => {
+      const result = where(123);
+      expect(result).toBe(-1);
+    });
+    it("if correct inputs are passed", () => {
+      const obj = {
+        company_name: "LifeLock",
+        city: "Tempe",
+        state: "AZ",
+        round: null,
+      };
+      const result = where(obj);
+      expect(result).toStrictEqual([0, 1, 2]);
     });
   });
 });
