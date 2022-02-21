@@ -1,0 +1,13 @@
+[
+    {
+        "fname": "jack",
+        "lname": "john",
+        "nick_name": "j"
+    },
+
+    {
+        "fname": "tom",
+        "lname": "cruise",
+        "nick_name": "tommy"
+    }
+]
