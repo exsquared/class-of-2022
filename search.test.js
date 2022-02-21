@@ -154,8 +154,7 @@ describe("search.js", () => {
                   raised_amount: 25000000,
                   raised_currency: 'USD',
                   round: 'c'
-                }
-              );
+                });
             });
         it ("3. should return -1 if wrong path is passed.", () => {
             const dataset = readFile("./data/startup-fund.json");
