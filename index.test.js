@@ -1,4 +1,4 @@
-import { where, readFile, findBy } from './index';
+import { where, readFile, findBy, search } from './index';
 
 describe("Test Case for Company Funding TDD", () => {
     describe("where()", () => {
@@ -105,6 +105,140 @@ describe("Test Case for Company Funding TDD", () => {
             const output = findBy(inputFile, {companyName:"Pudding Media", city:"San Jose", round:'a', state:'CA'});
             const expectedOutput = 556;
             expect(expectedOutput).toStrictEqual(output);
+        });
+    });
+    describe("search()", () => {
+        it("Should return -1 if file path is invalid", () => {
+            const inputFile = [
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-May-07",
+                  "raised_amount": 6850000,
+                  "raised_currency": "USD",
+                  "round": "b"
+                },
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-Oct-06",
+                  "raised_amount": 6000000,
+                  "raised_currency": "USD",
+                  "round": "a"
+                },
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-Jan-08",
+                  "raised_amount": 25000000,
+                  "raised_currency": "USD",
+                  "round": "c"
+                }];
+            const output = search(inputFile, {company_name: "LifeLock"});
+            const expectedOutput = [0,1,2];
+            expect(expectedOutput).toStrictEqual(output);
+        });
+        it("Should return -1 if file path is invalid", () => {
+            const inputFile = [
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-May-07",
+                  "raised_amount": 6850000,
+                  "raised_currency": "USD",
+                  "round": "b"
+                },
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-Oct-06",
+                  "raised_amount": 6000000,
+                  "raised_currency": "USD",
+                  "round": "a"
+                },
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-Jan-08",
+                  "raised_amount": 25000000,
+                  "raised_currency": "USD",
+                  "round": "c"
+                }];
+            const output = search(inputFile, {company_name: "LifeLock", round: 'a', city:'Tempe', state:'AZ'});
+            const expectedOutput = [1];
+            expect(expectedOutput).toStrictEqual(output);
+        });
+        it("Should return -1 if file path is invalid", () => {
+            const inputFile = [
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-May-07",
+                  "raised_amount": 6850000,
+                  "raised_currency": "USD",
+                  "round": "b"
+                },
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-Oct-06",
+                  "raised_amount": 6000000,
+                  "raised_currency": "USD",
+                  "round": "a"
+                },
+                {
+                  "permalink": "lifelock",
+                  "company_name": "LifeLock",
+                  "number_employees": 0,
+                  "category": "web",
+                  "city": "Tempe",
+                  "state": "AZ",
+                  "funded_date": "1-Jan-08",
+                  "raised_amount": 25000000,
+                  "raised_currency": "USD",
+                  "round": "c"
+                }];
+            const output = search(inputFile, {company_name: "LifeLock", round:'c'});
+            const expectedOutput = [2];
+            expect(expectedOutput).toStrictEqual(output);
+        });
+        it("Should return file content if file path is valid", () => {
+            const inputFile = "./data/startup-funding.json";
+            const output = readFile(inputFile);
+            const expectedOutput = require(inputFile);
+            expect(expectedOutput).toBe(output);
         });
     });
     describe("readFile()", () => {

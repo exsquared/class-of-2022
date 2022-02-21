@@ -48,7 +48,6 @@ function findBy(file, {companyName = null, city = null, state = null, round = nu
     }
 
     return filteredIndex[0];
-
 }
 
 function search(data, parameters){
