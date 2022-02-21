@@ -48,6 +48,12 @@ describe("main.js", ()=>{
             expect(output).toEqual(-1);
         })
 
+        it("Should handle when something other than object is passed.", ()=>{
+            const x = "munish";
+            const output = findBy(x);
+            expect(output).toEqual(-1);
+        })
+
         it("Should handle the case when all the propertyNames are wrong.", ()=>{
             const obj = {
                 "compaxnyName": 'EX Squared',
@@ -105,7 +111,7 @@ describe("main.js", ()=>{
             expect(output).toEqual(0);
         })
 
-        it("Should handle the case when the company name is not present.", ()=>{
+        it("Should handle the case when the company name is not present in the dataset.", ()=>{
             const obj = {
                 "company_name":"EX Squared"
             }
@@ -132,6 +138,12 @@ describe("where.js", ()=>{
                 "random": '12334'
             }
             const output = whereFunction(obj);
+            expect(output).toEqual(-1);
+        })
+
+        it("Should handle when something other than object is passed.", ()=>{
+            const x = 124;
+            const output = whereFunction(x);
             expect(output).toEqual(-1);
         })
 

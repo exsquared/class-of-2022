@@ -1,12 +1,10 @@
-export function helperFunction(options){
-
-    if(typeof(options) != 'object' || options == null || Array.isArray(options)) return -1;
+export function helperFunction(options: Object) : (number | Object){
 
     if(Object.keys(options).length == 0) return -1;
 
     if(Object.keys(options).length > 4) return -1;
 
-    const obj = {
+    const obj : Object = {
         "company_name": null,
         "city": null,
         "state": null, 
@@ -17,7 +15,7 @@ export function helperFunction(options){
         if(x in options) obj[x] = options[x];
     }
 
-    let finalObj = {};
+    let finalObj : Object = {};
 
     for(let x in obj){
         if(obj[x]!=null){
