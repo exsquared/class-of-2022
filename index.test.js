@@ -50,6 +50,12 @@ describe("Test Case for Company Funding TDD", () => {
             const expectedOutput = [5];
             expect(expectedOutput).toStrictEqual(output);
         });
+        it("Should return the data indexes matching the parameter after filtering.", () => {
+            const inputFile = "./data/startup-funding.json";
+            const output = where(inputFile, {companyName:"Pudding Media", city:"San Jose", round:'a', state:'CA'});
+            const expectedOutput = [556];
+            expect(expectedOutput).toStrictEqual(output);
+        });
     });
     describe("findBy()", () => {
         it("Should return 'File does not exist.' if file path is invalid", () => {
