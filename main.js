@@ -19,6 +19,8 @@ export function where(companyName, city, state, fundingRound) {
 
     var json = readJSON(address);
 
+    if(json === -1) return -1;
+
     let queryObject = prepareQueryObject(companyName, city, state, fundingRound);
 
     if(Object.keys(queryObject).length === 0){

@@ -24,24 +24,12 @@ export function prepareQueryObject(companyName, city, state, fundingRound){
 
     if(!companyName && !city && !state && !fundingRound) return -1;
 
-    let obj = {company_name: -1,
-        city: -1,
-        state: -1,
-        round : -1
-    };
-
-    if(companyName){
-        obj['company_name'] = companyName;
-    }
-    if(city){
-        obj['city'] = city;
-    }
-    if(state){
-        obj['state'] = state;
-    }
-    if(fundingRound){
-        obj['round'] = fundingRound;
-    }   
+    let obj = {
+        'company_name' : (companyName) ? companyName : -1,
+        'city' : (city) ? city : -1,
+        'state' : (state) ? state : -1,
+        'round' : (fundingRound) ? fundingRound : -1,
+    };  
 
     for (const property in obj) {
         if(obj[property] === -1){

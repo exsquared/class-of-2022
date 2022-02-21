@@ -91,6 +91,7 @@ describe("StartUpFunding Project",() => {
             const recievedResult =  where("LifeLock", "delhi", "AZ", 'b');
             expect(recievedResult).toStrictEqual(expectedResult);
         })
+        
     })
 
     describe("where function testing", () => {
@@ -122,6 +123,8 @@ describe("StartUpFunding Project",() => {
             const recievedResult =  findBy("LifeLock", "delhi", "AZ", 'b');
             expect(recievedResult).toStrictEqual(expectedResult);
         })
+
+        
     })
     
     
