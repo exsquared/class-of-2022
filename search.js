@@ -1,9 +1,9 @@
-// export { readFile, optionsSelection, findBy, where };
+export { readFile, optionsSelection, findBy, where };
 
 function readFile(path) {
     const fs = require('fs');
 // check if directory exists
-    if (!fs.existsSync(path)) {
+    if (fs.existsSync(path)) {
         let dataset = require(path);
         return dataset;
     } else {
@@ -67,5 +67,5 @@ var options = optionsSelection({"company_name": "LifeLock", "state": "AZ",});
 // console.log(options);
 var findByResult = findBy([], options);
 var whereResult = where(dataset, options);
-console.log(whereResult);
+// console.log(whereResult);
 // console.log(findByResult);

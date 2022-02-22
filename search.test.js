@@ -46,60 +46,12 @@ describe("search.js", () => {
             expect(Result).toEqual({});
         });
     });
-    describe("findBy", () => {
-       it("1. should return the object which matches the input.", () => {
-            const dataset = require("./data/startup-funding.json");
-            const options = {"company_name": "LifeLock", "city": "Tempe", "state": "AZ", "round": "a"}
-            const Result = findBy(dataset,options);
-            expect(Result).toEqual({
-            permalink: 'lifelock',
-            company_name: 'LifeLock',
-            number_employees: 0,
-            category: 'web',
-            city: 'Tempe',
-            state: 'AZ',
-            funded_date: '1-Oct-06',
-            raised_amount: 6000000,
-            raised_currency: 'USD',
-            round: 'a'
-            });
-        });
-        it("2. should return the objects if only 1 entry in options." , () => {
-            const dataset = require("./data/startup-funding.json");
-            const options = {"company_name": "LifeLock"}
-            const Result = findBy(dataset,options);
-            expect(Result).toEqual({
-                permalink: 'lifelock',
-                company_name: 'LifeLock',
-                number_employees: 0,
-                category: 'web',
-                city: 'Tempe',
-                state: 'AZ',
-                funded_date: '1-May-07',
-                raised_amount: 6850000,
-                raised_currency: 'USD',
-                round: 'b'
-            });
-        });
-        it ("3. should return -1 if wrong path is passed.", () => {
-            const dataset = readFile("./data/startup-fund.json");
-            const options = {"company_name": "LifeLock"}
-            const Result = findBy(dataset,options);
-            expect(Result).toEqual(-1);
-        });
-        it ("4. should return Not Found if empty dataset is passed.", () => {
-            const dataset = [];
-            const options = {"company_name": "LifeLock"}
-            const Result = findBy(dataset, options);
-            expect(Result).toEqual("Not Found.");
-        });
-    });
     describe("where", () => {
         it("1. should return all the object which matches the input.", () => {
              const dataset = require("./data/startup-funding.json");
              const options = {"company_name": "LifeLock", "city": "Tempe", "state": "AZ", "round": "a"}
-             const Result = findBy(dataset,options);
-             expect(Result).toEqual(
+             const Result = where(dataset,options);
+             expect(Result).toEqual([
                 {
                   permalink: 'lifelock',
                   company_name: 'LifeLock',
@@ -111,14 +63,14 @@ describe("search.js", () => {
                   raised_amount: 6000000,
                   raised_currency: 'USD',
                   round: 'a'
-                }
+                }]
               );
          });
         it("2. should return the objects if only 1 entry in options." , () => {
             const dataset = require("./data/startup-funding.json");
             const options = {"company_name": "LifeLock", "state": "AZ"};
-            const Result = findBy(dataset,options);
-            expect(Result).toEqual(
+            const Result = where(dataset,options);
+            expect(Result).toEqual([
                 {
                   permalink: 'lifelock',
                   company_name: 'LifeLock',
@@ -154,19 +106,79 @@ describe("search.js", () => {
                   raised_amount: 25000000,
                   raised_currency: 'USD',
                   round: 'c'
-                });
+                }]);
             });
-        it ("3. should return -1 if wrong path is passed.", () => {
+        it("3. should return the objects if only 1 entry in options." , () => {
+            const dataset = require("./data/startup-funding.json");
+            const options = {"company_name": "LifeLock", "state": 12};
+            const Result = where(dataset,options);
+            expect(Result).toEqual("Not Found.");
+        });    
+        it ("4. should return -1 if wrong path is passed.", () => {
             const dataset = readFile("./data/startup-fund.json");
             const options = {"company_name": "LifeLock"}
-            const Result = findBy(dataset,options);
+            const Result = where(dataset,options);
             expect(Result).toEqual(-1);
-            });
-        it ("4. should return Not Found if empty dataset is passed.", () => {
+        });
+        it ("5. should return Not Found if empty dataset is passed.", () => {
             const dataset = [];
             const options = {"company_name": "LifeLock"}
-            const Result = findBy(dataset, options);
+            const Result = where(dataset, options);
             expect(Result).toEqual("Not Found.");
         });
-    }); 
+    });
+    describe("findBy", () => {
+        it("1. should return the object which matches the input.", () => {
+             const dataset = require("./data/startup-funding.json");
+             const options = {"company_name": "LifeLock", "city": "Tempe", "state": "AZ", "round": "a"}
+             const Result = findBy(dataset,options);
+             expect(Result).toEqual({
+             permalink: 'lifelock',
+             company_name: 'LifeLock',
+             number_employees: 0,
+             category: 'web',
+             city: 'Tempe',
+             state: 'AZ',
+             funded_date: '1-Oct-06',
+             raised_amount: 6000000,
+             raised_currency: 'USD',
+             round: 'a'
+             });
+         });
+         it("2. should return the objects if only 1 entry in options." , () => {
+             const dataset = require("./data/startup-funding.json");
+             const options = {"company_name": "LifeLock"}
+             const Result = findBy(dataset,options);
+             expect(Result).toEqual({
+                 permalink: 'lifelock',
+                 company_name: 'LifeLock',
+                 number_employees: 0,
+                 category: 'web',
+                 city: 'Tempe',
+                 state: 'AZ',
+                 funded_date: '1-May-07',
+                 raised_amount: 6850000,
+                 raised_currency: 'USD',
+                 round: 'b'
+             });
+         });
+         it("3. should return the objects if only 1 entry in options." , () => {
+             const dataset = require("./data/startup-funding.json");
+             const options = {"company_name": "LifeLock", "state": 12};
+             const Result = findBy(dataset,options);
+             expect(Result).toEqual("Not Found.");
+     });
+         it ("4. should return -1 if wrong path is passed.", () => {
+             const dataset = readFile("./data/startup-fund.json");
+             const options = {"company_name": "LifeLock"}
+             const Result = findBy(dataset,options);
+             expect(Result).toEqual(-1);
+         });
+         it ("5. should return Not Found if empty dataset is passed.", () => {
+             const dataset = [];
+             const options = {"company_name": "LifeLock"}
+             const Result = findBy(dataset, options);
+             expect(Result).toEqual("Not Found.");
+         });
+     }); 
 });
