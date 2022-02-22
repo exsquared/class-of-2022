@@ -87,7 +87,7 @@ export function readInputFile(file){
 }
 
 
-console.log(where('ChosenList.com',null,null,null));
+console.log(where('LifeLock',null,null,null));
 
 
 

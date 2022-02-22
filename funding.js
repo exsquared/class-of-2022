@@ -74,4 +74,4 @@ function readInputFile(file) {
     return rawData;
 }
 exports.readInputFile = readInputFile;
-console.log(where('ChosenList.com', null, null, null));
+console.log(where('LifeLock', null, null, null));
