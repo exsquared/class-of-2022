@@ -9,7 +9,7 @@ function where(file: string, {companyName = null, city = null, state = null, rou
         return data;
     }
 
-    let params = {
+    let params: params = {
         'company_name': companyName ? companyName: false,
         'city': city ? city: false,
         'state': state ? state: false,
@@ -83,6 +83,13 @@ function readFile(filePath: string): string | Number{
     let data:string = require(filePath);
 
     return data;
+}
+
+interface params{
+    'company_name'?: string | boolean,
+    'city'?: string | boolean,
+    'state'?: string | boolean,
+    'round'?: string | boolean,
 }
 
 export { where, readFile, findBy, search };
