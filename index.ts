@@ -1,18 +1,16 @@
-// export { readFile, optionsSelection, findBy, where };
-
-function readFile(path) {
-    const fs = require('fs');
-// check if directory exists
+const fs = require('fs');
+function readFile(path : string): Array<object> | number {
+    // check if directory exists
     if (!fs.existsSync(path)) {
-        let dataset = require(path);
+        let dataset : Array<object> = require(path);
         return dataset;
     } else {
         return 0;
     }
 }    
 
-function optionsSelection(user_input) {
-    let options = {company_name: null, city: null, state: null, round: null};
+function optionsSelection(user_input : Object): Object | number {
+    let options : Object = {company_name: null, city: null, state: null, round: null};
     if (!user_input || Object.keys(user_input).length == 0) return -1;
     for (let key in options) {
         if (Object.keys(user_input).includes(key) && !(user_input[key]==null)) {
@@ -24,28 +22,30 @@ function optionsSelection(user_input) {
     return options; 
 }   
 
-function findBy(dataset,options) {
+function findBy(dataset : Array<object> | number , options : object | number) : string | object | number | string [] {
     if (!dataset) return -1;
-    let result = filterData(dataset, options);
+    let result : string[] = filterData(dataset, options);
     if (result.length > 0) {
         return result[0];
     }
     return "Not Found.";
 }
 
-function where(dataset,options) {
+function where(dataset : Array<object> | number , options : object | number) : string |object | number | Array<object> {
     if (!dataset) return -1;
-    let result = filterData(dataset, options);
+    let result : string[]  | number = filterData(dataset, options);
     if (result.length > 0) {
         return result;
     }
     return "Not Found.";
 }
     
-function filterData(dataset, options){
+function filterData(dataset : Array<object> | number  , options : object | number) : string [] {
     var finalOutput = [];
+    if (typeof dataset == "object") {
     for (let entry of dataset) { 
-        var flag = false;
+        var flag :boolean = false;
+        if (typeof options == "object") {
         for (let key in options) {
             if (options[key] == entry[key]) {               
                 flag = true;
@@ -54,18 +54,20 @@ function filterData(dataset, options){
                 break;
             }
         }
+    }
         if (flag) {
             finalOutput.push(entry);
         }
     }
+}
     return finalOutput;
 }
 
-var dataset = readFile("./data/startup-funding.json");
+var dataset : Array<object> | number = readFile("./data/startup-funding.json");
 // console.log(dataset);
-var options = optionsSelection({"company_name": "LifeLock", "state": "AZ",});
+var options  = optionsSelection({"company_name": "LifeLock", "state": "AZ",});
 // console.log(options);
-var findByResult = findBy([], options);
+var findByResult = findBy(dataset, options);
 var whereResult = where(dataset, options);
 console.log(whereResult);
 // console.log(findByResult);
