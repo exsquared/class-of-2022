@@ -17,7 +17,7 @@ function where(file: string, {companyName = null, city = null, state = null, rou
     };
 
     // Get [key, value] pair for only the passed parameters.
-    var requiredParams: Object = Object.keys(params).
+    var requiredParams: params = Object.keys(params).
                                 filter((key) => params[key]).
                                 reduce((cur, key) => { return Object.assign(cur, { [key]: params[key] })}, {});
 
@@ -51,7 +51,7 @@ function findBy(file: string, {companyName = null, city = null, state = null, ro
 
 }
 
-function search(data: any, parameters: any): Number[]{
+function search(data: any, parameters: params): Number[]{
     
     let requiredIndexes = [] as Number[];
 
