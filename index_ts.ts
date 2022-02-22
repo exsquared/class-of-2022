@@ -51,11 +51,11 @@ function findBy(file: string, {companyName = null, city = null, state = null, ro
 
 }
 
-function search(data: any, parameters: params): Number[]{
+function search(data: string | Number, parameters: params): Number[]{
     
     let requiredIndexes = [] as Number[];
 
-    let allKeys = Object.keys(parameters);
+    let allKeys: string[] = Object.keys(parameters);
 
     for(let i = 0; i < Object.keys(data).length; i++){
         let flag: number = 0
