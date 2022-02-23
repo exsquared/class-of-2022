@@ -1,4 +1,5 @@
-import { where, readFile, findBy, search } from './index';
+import { where, findBy } from './main';
+import { readFile, search } from './helper';
 
 describe("Test Case for Company Funding TDD", () => {
     describe("where()", () => {
