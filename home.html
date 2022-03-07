@@ -1,124 +1,101 @@
 <html>
+    <head></head>
+
     <body>
-        <button> PRESS ME</button>
+        <input type="text" placeholder="Enter name">
+        <button>Submit</button>
     </body>
-</html>
 
-<script>
-const button = document.querySelector('button');
+    <script>
+      /*  const name = document.querySelector('input');
+        const btn = document.querySelector('button');
 
-button.addEventListener('click', () => {
-    const names = prompt('What are your names?');
-   
-          /*    if(names.include('"\"') && names.include('\""')){
-                  let startIndex = names.indexOf('"\"');
-                  let endIndex = names.indexOf('\""');
-                  let extra = names.splice(startIndex,endIndex);
-                  names = names - names.split(startIndex,endIndex);
-                  
-                  let ex = extra.split(',');
-                  let exStr = `${ex[0]} and ${ex[1]}`;
+        const result = document.createElement('p');
 
-                  alert(greet(names.split(',') + `${exStr}`));
-                  
-                 // console.log(exStr)
-              }*/
-             
-    let myArray = names.split(',');
-    alert(greet(myArray));  
-           
-    
-});
+        let names = []
 
-function greet(myArray) {
-    const greeting = 'Hello,';
-    let str1 = `${greeting} `;
-   
-    if(!myArray){
-      return(`${greeting} my friends!`);
-  }
-  
-  else{           
-        
-         let str = '';
-         let capital = '';
-         let strEx = '';
-         let test = [];
-         
-        let k = 0;
-        // let strCap= '';
-        const last = myArray.slice(-1);
-        
-        for (let i=0; i<myArray.length-1; i++){
-            
-         
-            //adding non capital names in
-            if(myArray[i] !== myArray[i].toUpperCase()  && !myArray[i].includes('\'')){
-              if(i!=myArray.length-2 ){
-                str += `${myArray[i]}, `;
+        btn.addEventListener('click', () => {
+            names.push(name.value);
+            result.textContent = greet(names);
+            document.body.append(result);
+        });
+
+        function greet(name){
+
+            // Handling empty string or null string.
+            if(!name || name == ''){
+                return "Hello, my friend.";
             }
-            else{
-                str +=`${myArray[i]} `;
-            }
-        }
-        //creating an array of caps
-            else if(myArray[i] === myArray[i].toUpperCase()){
-                
-                capital[++k] += ` ${myArray[i].toUpperCase()}`;             
-        }
-                         
-        }
-    
-        let joined = '';
-        if(!capital){
-            if(myArray.length===1){
-            joined = `${str1} ${str}`;
-        }
-      else if(myArray.length===2){
-        joined = `${str1} ${myArray[0]} and ${myArray[1]}`;
-      }
-       
-      else{
-        joined = `${str1} ${str} and ${last} `;
-      }
-        }
-       
-    
-       
-        else{
-            if(capital.length===1 && myArray.length === 1){
-                joined = `${str1.toUpperCase()} ${capital[0]} `;
-            }
-            else if(capital.length===2 && myArray.length === 2){
-                joined = `${str.toUpperCase()} ${capital[0]} AND ${str1.toUpperCase()} ${capital[1]}`;
-            }
-            else if((capital.length===1) && myArray.length>=2){
-                joined = `${str1} ${str} ${last} and ${str1.toUpperCase()} ${capital[0]}`;
-            }
-            else if((capital.length>2) && (myArray.length>2)) {
-                let caps = '';
-                let caplast = '';
-                for(let l=0; l<capital.length; l++){
-                    if(l!==capital.length-2){
-                        caps += `${capital[l]}, `;
+
+            lowercaseNames = [];
+            uppercaseNames = [];
+
+            for(let n of name){
+                n = n.trim();
+                if(n.includes(',')){
+                    Handling entries with a comma. 
+                    if(n.includes('"')){
+                        /*
+                        Handling requirements with escape characters, allowing us to
+                        treat such entries as a single entity.
+                        
+                        lowercaseNames.push(n.slice(2, n.length-2)); // Removes first two and last two characters.
+                    }else{
+
+                        // Spliting non-escape character strings, treating them as different entries.
+                        const splitArray = n.split(',');
+                        
+                        for(let t of splitArray){
+                            if(t === t.toUpperCase()){
+                                uppercaseNames.push(t);
+                            }else{
+                                lowercaseNames.push(t);
+                            }
+                        }
                     }
-                    else{
-                        caplast = `${capital[l]}`
-                    }
-                   
                 }
-                joined = `${str1} ${str} ${last} and ${str1.toUpperCase()} ${caps} AND ${caplast}`;
-                
+
+                // Separating Capitalized and UPPERCASE names.
+                else if(n === n.toUpperCase()){
+                    uppercaseNames.push(n);
+                }else{
+                    lowercaseNames.push(n);
+                }
             }
 
+            concatString = '';
+
+            //Handling Capitalized names for a single name, two names and n-names.
+            if(lowercaseNames.length == 1){
+                concatString += "Hello, " + lowercaseNames[0] + ".";
+            }else if(lowercaseNames.length == 2){
+                concatString += "Hello, " + lowercaseNames[0] + " and " + lowercaseNames[1] + ".";
+            }else if (lowercaseNames.length > 2){
+                concatString += "Hello, ";
+                concatString += lowercaseNames.slice(0, lowercaseNames.length-1).join(", ") + ", and " + lowercaseNames[lowercaseNames.length - 1] + ".";
             }
-            
-        }
+
+            //Handling UPPERCASE names for a single name, two names and n-names.
+            if(uppercaseNames.length == 1){
+
+                // Used when no Capitalized name is given.
+                if(concatString.length == 0){
+                    concatString += "HELLO " + uppercaseNames[0] + "!";
+                }else{
+                    concatString += " AND HELLO " + uppercaseNames[0] + "!";
+                }
+            }else if(uppercaseNames.length > 1){
+
+                // Used when no Capitalized name is given.
+                if(concatString.length == 0){
+                    concatString += "HELLO ";
+                }else{
+                    concatString += " AND HELLO ";
+                }
+                concatString += uppercaseNames.slice(0, uppercaseNames.length-1).join(", ") + ", AND " + uppercaseNames[uppercaseNames.length - 1] + "!";
+            }
+            return concatString;
+        }*/
         
-          
-        return(joined);
-    }
-
-
-
-</script>
+    </script>
+</html>
