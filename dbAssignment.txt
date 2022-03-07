@@ -1,0 +1,50 @@
+2.) Inner Join -> 7
+Left outer join -> 10
+Right outer join -> 14
+full outer join -> 17
+cross join -> 7
+union all -> 18
+union -> 18
+
+4.) Update Emp
+set Gender = case
+when Gender = 'M' then 'F'
+when Gender = 'F' then 'M'
+end
+
+
+5.) The difference between query1, query 2 is that the AND condition is checked on the whole table and all the matched rows and left table rows are retured after checking the whole table
+wheras, in WHERE condition only the rows with WHERE condition are checked and then the result is returned.(The output here will be different).
+-> In 3, 4 both will have the same output.
+
+
+6.)select item as item_cart_1, item as item_cart_2 from item1 full outer join item2
+where item1.item = item2.item;
+
+
+8.)select distinct customer_id from orders as T1, orders as T2
+where T1.customer_id = T2.customer_id
+and T1.delivery_state = 'New Delhi' and T2.delivery_state = 'Mumbai';
+
+
+10.)select workflow, (case1 + case2 + case3) as Passed
+from table1;
+
+
+7.) select * from (
+(select * from FeedA
+union all
+select * from FeedB)
+union all
+select * from FeedC
+) as main_table
+group by main_table.listing_number, main_table.zip_code, main_table.address, main_table.city
+having count(main_table.listing_number) > 1;
+
+->insert into EMPLOYEE4
+Select * from 
+(
+    select * from EMPLOYEE union all select * from EMPLOYEE2
+) union all select * from EMPLOYEE3;
+
+select * from EMPLOYEE4;
