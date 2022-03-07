@@ -1,0 +1,27 @@
+2. 
+Inner join => 7
+Left Outer Join => 10
+Right Outer Join => 14
+Cross Join = > 72
+Cross Join with condition becomes Inner Join => 7
+Full Outer Join => 17
+
+4. 
+update Emp 
+    set Gender = case
+    when Gender = 'F' then 'M'
+    when Gender = 'M' then 'F'
+    end;
+
+select * from Emp;
+
+6.
+SELECT Table1.Item as Item_Cart_1, Table2.Item as Item_Cart_2
+from Table1 Outer Join Table2
+on Cart1.ITEM = Cart2.Item;
+
+10.
+SELECT Workflow, (coalesce(Case1, 0) + coalesce(Case2, 0) + coalesce(Case3, 0))as Passed
+From TABLE_NAME;
+
+coalesce  is used to handle null values.
