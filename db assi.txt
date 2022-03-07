@@ -1,0 +1,121 @@
+Ques1.)
+SELECT education.id, education.name,
+CASE WHEN 
+     (education.mark > 85 AND behavior.mark > 85) 
+     OR 
+     (sport.mark > 85 AND behavior.mark > 85) 
+     OR
+     (education.mark > 85 AND sport.mark > 85)
+THEN 'Merit'
+WHEN 
+     (education.mark > 65 AND behavior.mark > 65) 
+     OR 
+     (sport.mark > 65 AND behavior.mark > 65) 
+     OR
+     (education.mark > 65 AND sport.mark > 65)
+THEN 'Pass'
+ELSE 'Fail'
+END AS result
+FROM education
+INNER JOIN behavior ON behavior.id = sport.id;
+
+
+Ques2.)
+Inner join : 7
+Left Outer Join : 10
+Right Outer Join : 14
+Full Outer join : 17
+Cross Join : 7
+Union All : 18
+Union : 7
+
+Ques3.) 
+SELECT * from (select 1 a union all select 2 b) a
+join (select 1 a, 2 b union all select 1 a, 1 b ) b on a.a=b.b
+
+a = a
+1
+2
+
+a b = b
+1 2
+1 1
+
+
+a a b
+1 1 1
+2 1 2
+
+In it sub queries will be solved first and union will be made and after that join will be applied over the resulted queries
+
+Ques4.) 
+Update emp
+SET gender = 
+CASE
+WHEN gender = 'M' THEN 'F'
+ELSE 'M'
+END
+
+Ques5.) 
+Query 1:
+Inning Score
+1       2
+2       3
+2       6
+3       4
+4       9
+5       0
+
+
+Query 2:
+Inning Score
+2       3
+
+Query 3:
+Inning Score
+3       4
+3       7
+
+Query 4:
+Inning Score
+3       7
+
+Ques6.)
+SELECT Item as "Item_cart_1", Item as "Item_cart_2" FROM Item1 FULL OUTER JOIN Item2 ON Item1.Item = Item2.Item;
+
+
+Ques7.) 
+(i)
+SELECT * FROM (
+(SELECT *  FROM FeedA
+UNION ALL
+SELECT *  FROM FeedB)
+UNION ALL
+SELECT *  FROM FeedC
+) AS AllFeeds
+GROUP BY AllFeeds.listing_number, AllFeeds.zip_code, AllFeeds.address, AllFeeds.city
+HAVING COUNT(AllFeeds.listing_number) > 1;
+ 
+(ii)
+ 
+INSERT into Listing (SELECT * From (
+(SELECT *  FROM FeedA
+UNION ALL
+SELECT *  FROM FeedB)
+UNION ALL
+SELECT *  FROM FeedC
+) AS AllFeeds);
+
+
+Ques8.)
+SELECT DISTINCT customer_id FROM orders as table1 INNER JOIN orders as table2 WHERE table1.customer_id = table2.customer_id WHERE table1.delivery_state = "Mumbai"  AND table2.delievery_state = "Delhi";
+
+Ques9.)
+SELECT DISTINCT `Candidate ID`
+FROM candidates
+WHERE Description in ("Geologist", 'Astrogator', 'Technician');
+
+Ques10.)
+SELECT Workflow, (Case1 + Case2 + Case 3) AS Passed FROM report;
+
+
