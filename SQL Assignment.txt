@@ -1,0 +1,101 @@
+Q1
+SELECT education.id, education.name,
+CASE WHEN (education.mark > 85 AND behavior.mark > 85) OR (sport.mark > 85 AND behavior.mark > 85) OR (education.mark > 85 AND sport.mark > 85) THEN 'Merit'
+WHEN (education.mark > 65 AND behavior.mark > 65) OR (sport.mark > 65 AND behavior.mark > 65) OR (education.mark > 65 AND sport.mark > 65) THEN 'Pass'
+ELSE 'Fail'
+END AS Result
+FROM education
+INNER JOIN sport ON sport.id = education.id
+INNER JOIN behavior ON behavior.id = sport.id;
+ 
+Q2
+Inner Join = 7
+Left Outer Join = 10
+Right Outer Join = 14
+Full Outer Join = 17
+Cross Join = 7 (since we have a condition T1.id = T2.id, it'll act as inner join), otherwise 72.
+Union All = 18
+Union = 18
+ 
+Q3
+select 1 a union all select 2 b = It will create a table with a column named 'a' with two rows, 1,2.
+Therefore:-
+a
+1
+2
+ 
+select 1 a, 2 b union all select 1 a, 1 b = It will create a table with two columns ['a', 'b'] and will have two rows,
+1,2
+1,1
+Therefore:-
+a,b
+1,2
+1,1
+ 
+Now, we'll perform join operation and will get following result.
+ 
+a,a,b
+1,1,1
+2,1,2
+ 
+Q4
+UPDATE emp
+SET Gender = CASE WHEN Gender = "M" THEN "F" ELSE "M" END;
+ 
+Q5
+1. In query 1, the joining will be based on both TeamA.Inning = TeamB.Inning AND TeamA.Inning = 2, meaning even Inning = 1 and Inning = 2 from TeamA will have NULL values in TeamB table. And all rows from TeamA will be displayed.
+In query 2, the joining will be based on only TeamA.Inning = TeamB.Inning, meaning even Inning = 1 and Inning = 2 from TeamA will have values in TeamB table. But, the final output will only display a single row which is filtered using WHERE clause.
+ 
+4. Both will have same output.
+ 
+Q6
+SELECT table1.Item AS "Item Cart 1", table2.Item AS "Item Cart 2" FROM `table1` LEFT OUTER JOIN table2 ON table1.Item = table2.Item
+UNION
+SELECT table1.Item AS "Item Cart 1", table2.Item AS "Item Cart 2" FROM `table1` RIGHT OUTER JOIN table2 ON table1.Item = table2.Item;
+ 
+OR
+ 
+SELECT table1.Item AS "Item Cart 1", table2.Item AS "Item Cart 2" FROM `table1` FULL OUTER JOIN table2 ON table1.Item = table2.Item;
+ 
+Q7 (i)
+SELECT * FROM (
+(SELECT *  FROM FeedA
+UNION ALL
+SELECT *  FROM FeedB)
+UNION ALL
+SELECT *  FROM FeedC
+) AS AllFeeds
+GROUP BY AllFeeds.listing_number, AllFeeds.zip_code, AllFeeds.address, AllFeeds.city
+HAVING COUNT(AllFeeds.listing_number) > 1;
+ 
+(ii)
+ 
+INSERT into Listing (SELECT * From (
+(SELECT *  FROM FeedA
+UNION ALL
+SELECT *  FROM FeedB)
+UNION ALL
+SELECT *  FROM FeedC
+) AS AllFeeds);
+ 
+ 
+Q8
+SELECT DISTINCT d1.`Customer ID` FROM deliveries AS d1
+INNER JOIN deliveries d2
+ON d1.`Customer ID` = d2.`Customer ID`
+WHERE d1.`Delivery State` = 'New Delhi' AND d2.`Delivery State` = 'Mumbai';
+ 
+Q9
+SELECT DISTINCT `Candidate ID`
+FROM candidates
+WHERE Description in ("Geologist", 'Astrogator', 'Technician');
+ 
+OR
+ 
+SELECT DISTINCT c1.`Candidate ID` FROM candidates c1
+INNER JOIN candidates c2
+INNER JOIN candidates c3
+WHERE c1.`Description` = "Geologist" AND c2.`Description` = "Astrogator" AND c3.`Description` = "Technician";
+ 
+Q10
+SELECT Workflow, (`Case 1` + `Case 2` + `Case 3`) AS Passed FROM workflow_result;
