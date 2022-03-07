@@ -1,0 +1,85 @@
+
+
+
+ques1-
+SELECT education.id, education.name,
+CASE WHEN (education.mark > 85 AND behavior.mark > 85) OR (sport.mark > 85 AND behavior.mark > 85) OR (education.mark > 85 AND sport.mark > 85) THEN 'Merit'
+WHEN (education.mark > 65 AND behavior.mark > 65) OR (sport.mark > 65 AND behavior.mark > 65) OR (education.mark > 65 AND sport.mark > 65) THEN 'Pass'
+ELSE 'Fail'
+END AS Result
+FROM education
+INNER JOIN sport ON sport.id = education.id
+INNER JOIN behavior ON behavior.id = sport.id;
+
+
+
+ques 2-
+
+(i) inner join--7
+
+SELECT  * FROM  T1
+INNER JOIN T2
+ON T1.id = T2.id
+
+ii) left outer join--10
+SELECT  count(*) FROM  T1
+LEFT OUTER JOIN T2
+ON T1.id = T2.id
+
+(iii) right outer join--14
+
+SELECT  count(*) FROM  T1
+RIGHT OUTER JOIN T2
+ON T1.id = T2.id
+
+(iv) full outer join--17
+
+SELECT  count(*) FROM  T1
+FULL OUTER JOIN T2
+ON T1.id = T2.id
+
+(v) cross join--72
+
+SELECT  count(*) FROM  T1
+CROSS JOIN T2;
+
+(vi)union -18
+SELECT  * from T1
+UNION
+SELECT * from T2;
+
+(vii) union all-18
+SELECT  * from T1
+UNION ALL
+SELECT * from T2;
+
+
+
+Ques3- 
+
+
+Ques4-
+UPDATE emp
+SET Gender = CASE WHEN Gender = "M" THEN "F" ELSE "M" END;
+
+
+Ques5-
+(i) it will perform left outer join
+(ii) it will perform left outer join only where innings of teamA==2 (2,6)
+(iii)it will perform left outer join only where innings of teamB==3  (3,7)
+(iv) same as(iii)
+
+Ques6- 
+SELECT table1.Item AS "Item Cart 1", table2.Item AS "Item Cart 2" FROM `table1` FULL OUTER JOIN table2 ON table1.Item = table2.Item;
+
+Ques 7-
+
+
+Ques 8-
+SELECT DISTINCT d1.`Customer ID` FROM deliveries AS d1
+INNER JOIN deliveries d2
+ON d1.`Customer ID` = d2.`Customer ID`
+WHERE d1.`Delivery State` = 'New Delhi' AND d2.`Delivery State` = 'Mumbai';
+
+Ques 9--
+
