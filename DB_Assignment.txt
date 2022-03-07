@@ -1,0 +1,42 @@
+
+
+
+2. 
+Inner join: 7
+Left outer join: 10
+Right outer join: 14
+Full outer join: 17
+Cross join: 72
+Union all: 18
+Union: 18
+
+
+4.
+UPDATE Emp 
+SET Gender = 
+CASE Gender
+       WHEN "M" THEN "F"
+	 WHEN "F" THEN "M"
+END
+WHERE Gender IN ("M", "F");
+
+
+6.
+SELECT Item as Item_cart_1, Item as Item_cart_2 from Item1 full outer join Item2 where Item1.Item = Item2.Item;
+
+
+
+8.
+SELECT DISTINCT customer_id FROM orders as table1, orders as table2 WHERE table1.customer_id = table2.customer_id and table1.delivery_state = "Mumbai"  and table2.delievery_state = "Delhi";
+
+
+
+10.
+SELECT Workflow, (Case1 + Case2 + Case3) AS Passed from Report; 
+
+
+
+
+
+
+
