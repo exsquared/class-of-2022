@@ -48,3 +48,22 @@ Select * from
 ) union all select * from EMPLOYEE3;
 
 select * from EMPLOYEE4;
+
+
+3.) select 1 a will create a table having column a with value 1 and select 2 b will create a table with column name b having value 2.
+Therefore, union all will create table 
+a 
+1
+2
+
+select 1 a, 2 b union all 1 a, 1 b
+a b
+1 2
+1 1
+
+The former table has name a and the latter table as name b.
+Hence, after applying join with particular condition the output will be (a.a = b.b) the rows which satisfy the given condition.
+The final table will be 
+a a b
+1 1 1
+2 1 2
