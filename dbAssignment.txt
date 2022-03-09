@@ -67,3 +67,13 @@ The final table will be
 a a b
 1 1 1
 2 1 2
+
+
+1.) select education.id, education.name,
+case 
+when (education.marks > 85 and sports.marks > 85) or (sports.marks > 85 and behaviour.marks > 85) or (education.marks > 85 and behaviour.marks > 85) then 'merit'
+when (education.marks > 65 and sports.marks > 65) or (sports.marks > 65 and behaviour.marks > 65) or (education.marks > 65 and behaviour.marks > 65) then 'pass'
+else 'fail'
+end as category
+from education, sports, behaviour
+where (education.id = sports.id) and (sports.id = behaviour.id);
