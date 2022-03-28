@@ -1,60 +1,21 @@
-class Person {
-    constructor(Name, Address, Age) {
-      this.Name = Name;
-      this.Address = Address;
-      this.Age = Age;
-    }
-  }
-  let information = [];
-  class People {
-    constructor(person) {
-      this.person = person;
-      this.storeInfo(person);
-    }
+import {People} from "./People.js";
+import {Person} from "./Person.js";
+import {Name} from "./Name.js";
+import {Address} from "./Address.js";
+
+let name1 = new Name("Munish", "Kumar","Garg");
+let add1 = new Address("12", "Badkal", "Faridabad", "Haryana")
+
+let name2 = new Name("Sanjay", "Singh", "Rawat");
+let add2 = new Address("23", "Some", "Noida", "UP");
+
+let person1 = new Person(name1, add1, 12);
+let person2 = new Person(name2, add2, 24);
   
-    storeInfo(person) {
-      information.push(person);
-    }
-
-    showinfo() {
-      information.forEach((ele) => {
-        console.log(`\nName = ${ele.Name}\nAddress = ${ele.Address}\nAge = ${ele.Age}`);
-        
-      });
-    }
-
-    bornAfter1990() {
-        information.forEach(ele => {
-            if (ele.Age < 32){
-                console.log(`\nName = ${ele.Name}\nAddress = ${ele.Address}\nAge = ${ele.Age}`);
-            }
-        })
-    }
-
-    nameStartWithS() {
-        information.forEach(ele =>{
-            if (ele.Name.startsWith("S")) {
-                console.log(`\nName = ${ele.Name}\nAddress = ${ele.Address}\nAge = ${ele.Age}`);
-            }
-        })
-    }
-
-    livesInNoida() {
-        information.forEach(ele => {
-            if (ele.Address.toLowerCase().includes("noida")) {
-                console.log(`\nName = ${ele.Name}\nAddress = ${ele.Address}\nAge = ${ele.Age}`);
-            }
-        })
-    }
-  }
-  
-  let person1 = new Person("lalit", "Meerut", 12);
-  let person2 = new Person("Munish", "Noida", 24);
-  
-  let people1 = new People(person1);
-  let people2 = new People(person2);
-//   console.log(information);
-  people1.showinfo();
-//   people1.nameStartWithS();
-  people1.bornAfter1990();
-//   people1.livesInNoida();
+let people1 = new People();
+people1.storeInfo(person1);
+people1.storeInfo(person2);
+// people1.showInfo();
+  people1.nameStartWithEnteredLetter("S");
+//   people1.bornAfterParticularYear(1990);
+//   people1.livesInEnteredCity("Faridabad");
