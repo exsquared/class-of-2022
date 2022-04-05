@@ -1,49 +1,14 @@
 ﻿using System;
-using System.IO;
-//using System.Text.RegularExpressions;
-using Newtonsoft.Json;
-using ProjectFetch;
-using RootObjectNamespace;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using GettingUserDataNamespace;
+using FileAndShowNamespace;
 
-namespace FileReader
+namespace ConsoleApp2
 {
-    class GettingUserData
-    {
-        public string username { set; get; }
-        public string password { set; get; }
-        public void GetData() { 
-            Console.WriteLine("Enter Username:");
-            username = Console.ReadLine().Trim();
-            Console.WriteLine("Enter Password: ");
-            password = Console.ReadLine().Trim();        
-        }  
-    }
-    class Fetch:ProgramFetch
-    {
-        static Dictionary<string, object> result = new Dictionary<string, object>();
-        public static async void FetchData()
-        {
-            Console.WriteLine("Do you want to fetch API");
-            string inputFromUser = Console.ReadLine().Trim();
-
-            if (inputFromUser == "Y" || inputFromUser == "y")
-            {
-                
-                string URL = "https://sprint-api.homluv.com/api/v3HomeDetail/p1483576";
-                string jsonstring =  FetchJSONData(URL).Result;
-                //string jsonstring = await FetchJSONData(URL);
-                RootObject robj = JsonConvert.DeserializeObject<RootObject>(jsonstring);
-                result.Add("homeId", robj.HomeDetail.homeId);
-                result.Add("communityName", robj.HomeDetail.communityName);
-                result.Add("homeName", robj.HomeDetail.homeName);
-                result.Add("marketName", robj.HomeDetail.marketName);
-                Print(result);
-
-                
-            }
-        }
-    }
-    class Authentication
+    public class Authentication
     {
         public static void Main(string[] args)
         {
@@ -51,7 +16,7 @@ namespace FileReader
             StreamReader s = new StreamReader(f);
             GettingUserData obj = new GettingUserData();
             obj.GetData();
-            bool isusercorrect = false;  
+            bool isusercorrect = false;
             bool ispswcorrect = false;
             bool userexists = false;
 
@@ -66,14 +31,14 @@ namespace FileReader
                     if (obj.username == linelist[3])
                     {
                         isusercorrect = true;
-                    }                    
+                    }
                 }
                 if ((line.Contains("password") || line.Contains("Password")))
                 {   //Console.WriteLine(linelist[3]);
                     ispswcorrect = false;
                     if (obj.password == linelist[3])
                     {
-                            ispswcorrect = true;
+                        ispswcorrect = true;
                     }
                     if (isusercorrect && ispswcorrect)
                     {
@@ -89,9 +54,9 @@ namespace FileReader
                     else if (isusercorrect && !ispswcorrect)
                     {
                         Console.WriteLine("Wrong Password.");
-                        break ;
-                    } 
-                }               
+                        break;
+                    }
+                }
             }
             if (!isusercorrect && !ispswcorrect)
             {
@@ -101,7 +66,7 @@ namespace FileReader
             f.Close();
             if (userexists)
             {
-                Fetch.FetchData();
+                FetchAndShow.FetchData();
             }
         }
     }

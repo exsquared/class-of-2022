@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace ProjectFetch
 {    
-    class ProgramFetch
+    public class ProgramFetch
     {
         /*public static async Task Main(string[] args)
         {
