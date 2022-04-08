@@ -5,9 +5,9 @@ using HomeDetailResponseNamespace;
 
 namespace RootObjectNamespace
 {
-    public class RootObject
+    class RootObject
     {
         [JsonProperty("homeDetail")]
-        public HomeDetailResponse homeDetail { get; set; }
+        internal HomeDetailResponse homeDetail { get; set; }
     }
 }

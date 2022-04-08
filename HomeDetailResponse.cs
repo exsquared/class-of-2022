@@ -4,15 +4,15 @@ using Newtonsoft.Json;
 
 namespace HomeDetailResponseNamespace
 {
-    public class HomeDetailResponse
+    class HomeDetailResponse
     {
         [JsonProperty("homeId")]
-        public int homeId { get; set; }
+        internal int homeId { get; set; }
         [JsonProperty("commName")]
-        public string communityName { get; set; }
+        internal string communityName { get; set; }
         [JsonProperty("planName")]
-        public string homeName { get; set; }
+        internal string homeName { get; set; }
         [JsonProperty("marketName")]
-        public string marketName { get; set; }
+        internal string marketName { get; set; }
     }
 }
