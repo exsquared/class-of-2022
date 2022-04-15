@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Assignment2API.Repositories;
 using Assignment2API.Services;
+using Assignment2API.Models;
 
 namespace WebAPIApplication3.Controllers
 {
@@ -14,20 +14,30 @@ namespace WebAPIApplication3.Controllers
         {
             this.service = service;
         }
+
+        /// <summary>
+        /// Retrieves home Detail for a specific homeId
+        /// </summary>      
         [HttpGet("{homeId}")]
-        public async Task<dynamic> GetHomeDetailControllerFunc(string homeId)
+        public async Task<HomeDetailRootModel> GetHomeDetailControllerFunc(string homeId)
         {
             return await service.GetHomeDetailServiceFunc(homeId);    
         }
 
+        /// <summary>
+        /// Retrieves location info for a specific searchtext
+        /// </summary>
         [HttpGet("searchText")]
-        public async Task<dynamic> GetLocationControllerFunc(string searchText)
+        public async Task<List<LocationRootModel>> GetLocationControllerFunc(string? searchText)
         {
             return await service.GetLocationServiceFunc(searchText);
         }
 
+        /// <summary>
+        /// Post Request with a body
+        /// </summary>
         [HttpPost("body")]
-        public async Task<dynamic> GetResultsControllerFunc(string body)
+        public async Task<dynamic> GetResultsControllerFunc(ResultsRootInputModel body)
         {
             return await service.GetResultsServiceFunc(body);
         }

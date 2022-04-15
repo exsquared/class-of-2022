@@ -4,5 +4,20 @@
         <name>Assignment2API</name>
     </assembly>
     <members>
+        <member name="M:WebAPIApplication3.Controllers.GetDataController.GetHomeDetailControllerFunc(System.String)">
+            <summary>
+            Retrieves home Detail for a specific homeId
+            </summary>      
+        </member>
+        <member name="M:WebAPIApplication3.Controllers.GetDataController.GetLocationControllerFunc(System.String)">
+            <summary>
+            Retrieves location info for a specific searchtext
+            </summary>
+        </member>
+        <member name="M:WebAPIApplication3.Controllers.GetDataController.GetResultsControllerFunc(Assignment2API.Models.ResultsRootInputModel)">
+            <summary>
+            Post Request with a body
+            </summary>
+        </member>
     </members>
 </doc>

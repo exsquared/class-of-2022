@@ -1,9 +1,13 @@
-﻿namespace Assignment2API.Services
+﻿using Assignment2API.Models;
+
+namespace Assignment2API.Services
 {
     public interface IGetDataService
     {
-        Task<dynamic> GetHomeDetailServiceFunc(string homeId);
-        Task<dynamic> GetLocationServiceFunc(string searchText);
-        Task<dynamic> GetResultsServiceFunc(string body);
+        Task<HomeDetailRootModel> GetHomeDetailServiceFunc(string homeId);
+
+        Task<List<LocationRootModel>> GetLocationServiceFunc(string? searchText);
+        
+        Task<dynamic> GetResultsServiceFunc(ResultsRootInputModel body);
     }
 }

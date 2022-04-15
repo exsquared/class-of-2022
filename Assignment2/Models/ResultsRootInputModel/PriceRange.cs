@@ -2,7 +2,7 @@
 {
     public class PriceRange
     {
-        public int lower { get; set; }
-        public int upper { get; set; }
+        public int Lower { get; set; }
+        public int Upper { get; set; }
     }
 }
