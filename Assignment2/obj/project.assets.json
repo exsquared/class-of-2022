@@ -454,11 +454,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment2\\Assignment2API.csproj",
+      "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication3 - Copy\\WebAPIApplication3\\Assignment2API.csproj",
       "projectName": "Assignment2API",
-      "projectPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment2\\Assignment2API.csproj",
+      "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication3 - Copy\\WebAPIApplication3\\Assignment2API.csproj",
       "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment2\\obj\\",
+      "outputPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication3 - Copy\\WebAPIApplication3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",

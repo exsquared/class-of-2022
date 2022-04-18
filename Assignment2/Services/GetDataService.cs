@@ -1,31 +1,30 @@
-﻿using RestSharp;
-using Assignment2API.Repositories;
+﻿using Assignment2API.Repositories;
 using Assignment2API.Models;
+using Assignment2API.Models.ResultsRootModel;
 
 namespace Assignment2API.Services
 {
     public class GetDataService : IGetDataService
     {
-        private readonly IGetDataRepo repo;
-
+        private readonly IGetDataRepo _repo;
         public GetDataService(IGetDataRepo repo)
         {
-            this.repo = repo;
+            this._repo = repo; 
         }
-
         public async Task<HomeDetailRootModel> GetHomeDetailServiceFunc(string homeId)
-        {            
-            return await repo.GetHomeDetailRepoFunc(homeId);            
+        {
+            return await _repo.GetHomeDetailRepoFunc(homeId);            
         }
         
         public async Task<List<LocationRootModel>> GetLocationServiceFunc(string? searchText)
         {               
-            return await repo.GetLocationRepoFunc(searchText);            
+            return await _repo.GetLocationRepoFunc(searchText);            
         }
 
-        public async Task<dynamic> GetResultsServiceFunc(ResultsRootInputModel body)
+        public async Task<ResultsRootModel> GetResultsServiceFunc(ResultsRootInputModel body)
         {               
-            return await repo.GetResultsRepoFunc(body);
+            ResultsRootModel result=  await _repo.GetResultsRepoFunc(body);
+            return result;
         }
         
     }

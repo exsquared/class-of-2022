@@ -5,12 +5,12 @@ using Assignment2API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSingleton<IGetDataService, GetDataService>();
 builder.Services.AddSingleton<IGetDataRepo, GetDataRepo>();
-
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -25,6 +25,7 @@ builder.Services.AddSwaggerGen(options =>
 
 var app = builder.Build();
 
+// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Assignment2API.Services;
 using Assignment2API.Models;
+using Assignment2API.Models.ResultsRootModel;
 
 namespace WebAPIApplication3.Controllers
 {
@@ -8,11 +9,11 @@ namespace WebAPIApplication3.Controllers
     [ApiController]
     public class GetDataController : ControllerBase
     {
-        private readonly IGetDataService service;
+        private readonly IGetDataService _service;
 
         public GetDataController(IGetDataService service)
         {
-            this.service = service;
+            this._service = service;
         }
 
         /// <summary>
@@ -21,7 +22,7 @@ namespace WebAPIApplication3.Controllers
         [HttpGet("{homeId}")]
         public async Task<HomeDetailRootModel> GetHomeDetailControllerFunc(string homeId)
         {
-            return await service.GetHomeDetailServiceFunc(homeId);    
+            return await _service.GetHomeDetailServiceFunc(homeId);    
         }
 
         /// <summary>
@@ -30,7 +31,7 @@ namespace WebAPIApplication3.Controllers
         [HttpGet("searchText")]
         public async Task<List<LocationRootModel>> GetLocationControllerFunc(string? searchText)
         {
-            return await service.GetLocationServiceFunc(searchText);
+            return await _service.GetLocationServiceFunc(searchText);
         }
 
         /// <summary>
@@ -39,8 +40,7 @@ namespace WebAPIApplication3.Controllers
         [HttpPost("body")]
         public async Task<dynamic> GetResultsControllerFunc(ResultsRootInputModel body)
         {
-            return await service.GetResultsServiceFunc(body);
-        }
-         
+            return await _service.GetResultsServiceFunc(body);
+        }         
     }
 }
