@@ -1,0 +1,64 @@
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\appsettings.json
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.exe
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.deps.json
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.runtimeconfig.json
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.pdb
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.csproj.AssemblyReference.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.AssemblyInfoInputs.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.AssemblyInfo.cs
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.csproj.CoreCompileInputs.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\scopedcss\bundle\WebAPIApplication4.styles.css
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.csproj.CopyComplete
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\refint\WebAPIApplication4.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.pdb
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.genruntimeconfig.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\obj\Debug\net6.0\ref\WebAPIApplication4.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4\WebAPIApplication4\bin\Debug\net6.0\RestSharp.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\appsettings.json
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.exe
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.deps.json
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.runtimeconfig.json
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\WebAPIApplication4.pdb
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\RestSharp.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Models.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Repositories.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Services.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Models.pdb
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Services.pdb
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\Repositories.pdb
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.csproj.AssemblyReference.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.AssemblyInfoInputs.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.AssemblyInfo.cs
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.csproj.CoreCompileInputs.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\scopedcss\bundle\WebAPIApplication4.styles.css
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.csproj.CopyComplete
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\refint\WebAPIApplication4.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.pdb
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.genruntimeconfig.cache
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\ref\WebAPIApplication4.dll
