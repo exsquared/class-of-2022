@@ -27,7 +27,7 @@ namespace WebAPIApplication4.Services
         public IEnumerable<string> CheapestBikeByBrandServiceFunc(string brandName)
         {
             return _repo.CheapestBikeByBrandRepoFunc()
-                  .Where(bike => bike.Brand == brandName)
+                  .Where(bike => bike.Brand.ToLower() == brandName.ToLower())
                   .OrderBy(bike => bike.Price)
                   .Select(bike => bike.Bike_name)
                   .Take(1);
