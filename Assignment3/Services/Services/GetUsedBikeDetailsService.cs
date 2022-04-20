@@ -29,7 +29,7 @@ namespace WebAPIApplication4.Services
             return _repo.CheapestBikeByBrandRepoFunc()
                   .Where(bike => bike.Brand.ToLower() == brandName.ToLower())
                   .OrderBy(bike => bike.Price)
-                  .Select(bike => bike.Bike_name)
+                  .Select(bike => $"Bike Name : { bike.Bike_name } Price :  { bike.Price }")
                   .Take(1);
         }
 
