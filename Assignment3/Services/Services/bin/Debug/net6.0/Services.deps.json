@@ -38,12 +38,20 @@
       },
       "Repositories/1.0.0": {
         "dependencies": {
-          "Models": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
-          "RestSharp": "107.3.0"
+          "RestSharp": "107.3.0",
+          "UtilityLibrary": "1.0.0"
         },
         "runtime": {
           "Repositories.dll": {}
+        }
+      },
+      "UtilityLibrary/1.0.0": {
+        "dependencies": {
+          "Models": "1.0.0"
+        },
+        "runtime": {
+          "UtilityLibrary.dll": {}
         }
       }
     }
@@ -74,6 +82,11 @@
       "sha512": ""
     },
     "Repositories/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "UtilityLibrary/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

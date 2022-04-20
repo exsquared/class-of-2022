@@ -21,9 +21,9 @@ namespace WebAPIApplication4.Services
             }
             return _repo.ReadCSVFileRepoFunc()
                 .Skip(pageSize * (pageNo - 1))
-                .Take(pageSize);
-            
+                .Take(pageSize);            
         }
+
         public IEnumerable<string> CheapestBikeByBrandServiceFunc(string brandName)
         {
             return _repo.CheapestBikeByBrandRepoFunc()
@@ -32,6 +32,7 @@ namespace WebAPIApplication4.Services
                   .Select(bike => bike.Bike_name)
                   .Take(1);
         }
+
         public IEnumerable<string> AllCityNamesServiceFunc()
         {
             return _repo.AllCityNamesRepoFunc()
@@ -42,12 +43,10 @@ namespace WebAPIApplication4.Services
         public async Task<string> GetCoordinatesOfCityServiceFuncAsync(string city)
         {
             List<GeocodingAPIModel> result =  await _repo.GetCoordinatesOfCityRepoFuncAsync(city);
-            //return result;
-            if (result.Count > 2)
+            if (result.Count >= 1)
                 return $"Latitude : {result[0].Lat}\nLongitude : {result[0].Lon}";
             else
                 return "{-1, -1}";
         }
-
     }
 }

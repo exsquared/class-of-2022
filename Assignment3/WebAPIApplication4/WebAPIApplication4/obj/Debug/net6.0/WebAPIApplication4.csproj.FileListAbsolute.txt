@@ -62,3 +62,5 @@ C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\De
 C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.pdb
 C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\WebAPIApplication4.genruntimeconfig.cache
 C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\obj\Debug\net6.0\ref\WebAPIApplication4.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\UtilityLibrary.dll
+C:\Users\lsingh\source\repos\WebAPIApplication4 - Copy\WebAPIApplication4\bin\Debug\net6.0\UtilityLibrary.pdb

@@ -2,10 +2,10 @@
 {
     public class GeocodingAPIModel
     {
-        public string? Place_id { get; set; }
-        public string? Licence { get; set; }
-        public string? Osm_type { get; set; }
-        public string? Osm_id { get; set; }
+        public string Place_id { get; set; }
+        public string Licence { get; set; }
+        public string Osm_type { get; set; }
+        public string Osm_id { get; set; }
         public List<string>? Boundingbox { get; set; }
         public string? Lat { get; set; }
         public string? Lon { get; set; }

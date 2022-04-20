@@ -37,6 +37,7 @@ namespace WebAPIApplication4.Controllers
         {
             return _service.AllCityNamesServiceFunc();
         }
+
         [HttpGet]
         [Route("coordinates")]
         public async Task<string> GetCoordinatesOfCityControllerFuncAsync(string city)
