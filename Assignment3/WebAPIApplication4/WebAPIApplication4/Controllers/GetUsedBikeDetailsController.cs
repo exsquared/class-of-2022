@@ -26,7 +26,7 @@ namespace WebAPIApplication4.Controllers
 
         [HttpGet]
         [Route("cheapestbikebybrand")]
-        public IEnumerable<string> CheapestBikeByBrandControllerFunc(string brandName)
+        public IEnumerable<UsedBikeDetailsModel> CheapestBikeByBrandControllerFunc(string brandName)
         {
             return _service.CheapestBikeByBrandServiceFunc(brandName);
         }
