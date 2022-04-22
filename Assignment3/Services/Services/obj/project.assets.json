@@ -20,6 +20,16 @@
           "lib/net6.0/RestSharp.dll": {}
         }
       },
+      "ConstantsLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/ConstantsLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConstantsLibrary.dll": {}
+        }
+      },
       "Models/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -34,6 +44,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "ConstantsLibrary": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
           "RestSharp": "107.3.0",
           "UtilityLibrary": "1.0.0"
@@ -106,6 +117,11 @@
         "restsharp.png"
       ]
     },
+    "ConstantsLibrary/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../source/repos/ConstantsLibrary/ConstantsLibrary/ConstantsLibrary.csproj",
+      "msbuildProject": "../../../../../../source/repos/ConstantsLibrary/ConstantsLibrary/ConstantsLibrary.csproj"
+    },
     "Models/1.0.0": {
       "type": "project",
       "path": "../../Models/Models/Models.csproj",
@@ -134,11 +150,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\Services\\Services\\Services.csproj",
+      "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Services\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "C:\\Users\\lsingh\\source\\repos\\Services\\Services\\Services.csproj",
+      "projectPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Services\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lsingh\\source\\repos\\Services\\Services\\obj\\",
+      "outputPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Services\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -155,11 +171,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\lsingh\\source\\repos\\Models\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\lsingh\\source\\repos\\Models\\Models\\Models.csproj"
+            "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Models\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Models\\Models\\Models.csproj"
             },
-            "C:\\Users\\lsingh\\source\\repos\\Repositories\\Repositories\\Repositories.csproj": {
-              "projectPath": "C:\\Users\\lsingh\\source\\repos\\Repositories\\Repositories\\Repositories.csproj"
+            "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Repositories\\Repositories\\Repositories.csproj": {
+              "projectPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Repositories\\Repositories\\Repositories.csproj"
             }
           }
         }
@@ -188,7 +204,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

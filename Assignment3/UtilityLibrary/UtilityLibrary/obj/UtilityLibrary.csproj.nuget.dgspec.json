@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lsingh\\source\\repos\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj": {}
+    "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lsingh\\source\\repos\\Models\\Models\\Models.csproj": {
+    "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Models\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\Models\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Models\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\lsingh\\source\\repos\\Models\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Models\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsingh\\source\\repos\\Models\\Models\\obj\\",
+        "outputPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Models\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,18 +54,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\lsingh\\source\\repos\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj": {
+    "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj",
         "projectName": "UtilityLibrary",
-        "projectPath": "C:\\Users\\lsingh\\source\\repos\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj",
+        "projectPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj",
         "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsingh\\source\\repos\\UtilityLibrary\\UtilityLibrary\\obj\\",
+        "outputPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\UtilityLibrary\\UtilityLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -82,8 +82,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lsingh\\source\\repos\\Models\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\lsingh\\source\\repos\\Models\\Models\\Models.csproj"
+              "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Models\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\lsingh\\Desktop\\Clone\\class-of-2022\\Assignment3\\Models\\Models\\Models.csproj"
               }
             }
           }
@@ -112,7 +112,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

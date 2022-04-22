@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\..\source\repos\ConstantsLibrary\ConstantsLibrary\ConstantsLibrary.csproj" />
     <ProjectReference Include="..\..\UtilityLibrary\UtilityLibrary\UtilityLibrary.csproj" />
   </ItemGroup>
 

@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "Repositories/1.0.0": {
         "dependencies": {
+          "ConstantsLibrary": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
           "RestSharp": "107.3.0",
           "UtilityLibrary": "1.0.0"
@@ -30,6 +31,11 @@
             "assemblyVersion": "107.3.0.0",
             "fileVersion": "107.3.0.0"
           }
+        }
+      },
+      "ConstantsLibrary/1.0.0": {
+        "runtime": {
+          "ConstantsLibrary.dll": {}
         }
       },
       "Models/1.0.0": {
@@ -66,6 +72,11 @@
       "sha512": "sha512-qu+A+VAnVLX3OeWVNm11UJz0aVErqSfYqIiOUbJM9x98uLymCOoL/oXRAjMb6XHra27WXxHmzy9EKEOKXWR6Pw==",
       "path": "restsharp/107.3.0",
       "hashPath": "restsharp.107.3.0.nupkg.sha512"
+    },
+    "ConstantsLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Models/1.0.0": {
       "type": "project",

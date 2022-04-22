@@ -10,8 +10,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 
-builder.Services.AddScoped<IGetUsedBikeDetailsRepo, GetUsedBikeDetailsRepo>();
-builder.Services.AddScoped<IGetUsedBikeDetailsService, GetUsedBikeDetailsService>();
+builder.Services.AddScoped<global::WebAPIApplication4.Repositories.IGetUsedBikeDetails, global::WebAPIApplication4.Repositories.GetUsedBikeDetails>();
+builder.Services.AddScoped<global::WebAPIApplication4.Services.IGetUsedBikeDetails, global::WebAPIApplication4.Services.GetUsedBikeDetails>();
 
 builder.Services.AddSwaggerGen();
 

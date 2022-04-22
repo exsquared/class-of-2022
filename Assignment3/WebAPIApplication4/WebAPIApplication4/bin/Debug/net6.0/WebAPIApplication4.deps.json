@@ -81,6 +81,11 @@
           }
         }
       },
+      "ConstantsLibrary/1.0.0": {
+        "runtime": {
+          "ConstantsLibrary.dll": {}
+        }
+      },
       "Models/1.0.0": {
         "runtime": {
           "Models.dll": {}
@@ -88,6 +93,7 @@
       },
       "Repositories/1.0.0": {
         "dependencies": {
+          "ConstantsLibrary": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
           "RestSharp": "107.3.0",
           "UtilityLibrary": "1.0.0"
@@ -176,6 +182,11 @@
       "sha512": "sha512-bCRI87uKJVb4G+KURWm8LQrL64St04dEFZcF6gIM67Zc0Sr/N47EO83ybLMYOvfNdO1DCv8xwPcrz9J/VEhQ5g==",
       "path": "swashbuckle.aspnetcore.swaggerui/6.2.3",
       "hashPath": "swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+    },
+    "ConstantsLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Models/1.0.0": {
       "type": "project",

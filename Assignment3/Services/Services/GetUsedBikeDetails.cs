@@ -1,44 +1,40 @@
-﻿using WebAPIApplication4.Repositories;
-using WebAPIApplication4.Models;
+﻿using WebAPIApplication4.Models;
 
 namespace WebAPIApplication4.Services
 {
-    public class GetUsedBikeDetailsService : IGetUsedBikeDetailsService
+    public class GetUsedBikeDetails : IGetUsedBikeDetails
     {
 
-        private readonly IGetUsedBikeDetailsRepo _repo;
+        private readonly Repositories.IGetUsedBikeDetails _repo;
 
-        public GetUsedBikeDetailsService(IGetUsedBikeDetailsRepo repo)
+        public GetUsedBikeDetails(Repositories.IGetUsedBikeDetails repo)
         {
             this._repo = repo;
         }
 
         public IEnumerable<UsedBikeDetailsModel> GetUsedBikeDataServiceFunc(int pageSize, int pageNo)
         {
-            if (_repo.ReadCSVFileRepoFunc().Count() < (pageNo * pageSize))
+            if (_repo.ReturnCSVFileData()?.Count < (pageNo * pageSize))
             {
                 return new UsedBikeDetailsModel[0];;
             }
-            return _repo.ReadCSVFileRepoFunc()
+            return _repo.ReturnCSVFileData()
                 .Skip(pageSize * (pageNo - 1))
                 .Take(pageSize);            
         }
 
         public IEnumerable<UsedBikeDetailsModel> CheapestBikeByBrandServiceFunc(string brandName)
         {
-            return _repo.CheapestBikeByBrandRepoFunc()
-                  .Where(bike => bike.Brand.ToLower() == brandName.ToLower())
+            brandName = brandName.ToUpper();
+            return _repo.ReturnCSVFileData()
+                  .Where(bike => bike.Brand == brandName)
                   .OrderBy(bike => bike.Price)
-<<<<<<< HEAD
-=======
-                  .Select(bike => $"Bike Name : { bike.Bike_name } Price :  { bike.Price }")
->>>>>>> 29a90a97e56143da7f59409abbf3c3ab95541314
                   .Take(1);
         }
 
         public IEnumerable<string> AllCityNamesServiceFunc()
         {
-            return _repo.AllCityNamesRepoFunc()
+            return _repo.ReturnCSVFileData()
                 .Select(bike => bike.City)
                 .Distinct();
         }

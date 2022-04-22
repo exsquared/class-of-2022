@@ -8,13 +8,12 @@ namespace WebAPIApplication4.Controllers
     [ApiController]
     public class GetUsedBikeDetailsController : ControllerBase
     {
-        private readonly IGetUsedBikeDetailsService _service;
+        private readonly IGetUsedBikeDetails _service;
 
-        public GetUsedBikeDetailsController(IGetUsedBikeDetailsService service)
+        public GetUsedBikeDetailsController(IGetUsedBikeDetails service)
         {
             this._service = service;
         }
-
 
         [HttpGet]
         [Route("allbikes")]
