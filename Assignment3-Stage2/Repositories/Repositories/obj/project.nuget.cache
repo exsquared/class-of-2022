@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "kvrPHdXWULXikofAKjOautEwIvdfLwb4OEpv7idprPGNEnNqamYhB86VVg1bXoQFkzmbXLSyAFekXjZG+rRk4g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Repositories\\Repositories\\Repositories.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lsingh\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\restsharp\\107.3.0\\restsharp.107.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

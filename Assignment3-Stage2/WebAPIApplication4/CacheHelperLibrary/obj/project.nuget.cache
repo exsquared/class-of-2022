@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "5cGhQ4ly3li6EHW5c6bonqksk2xupdmHFeBc6IVtQiq2Hu6Qwr9XW9oF3KFo2jGf2fCNDeTjTWbZT3oCTGJXvg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\WebAPIApplication4\\CacheHelperLibrary\\CacheHelperLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
