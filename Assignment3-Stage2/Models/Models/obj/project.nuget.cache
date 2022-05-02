@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "rtOWG5/lDURHzXY84vUDlE2B/q1P1gaG1CQW4deGJNzSv4osq7VdKnxhHjiPYOhVIpfVkTH5h0QXbLxmCqwyVg==",
+  "dgSpecHash": "doZv5l+gjCLt2v7TO8qeNkeCh4IKZGQk7TKXdUi41rdY6DpVMpW70sfL0hwJf/o1Wigb/tfzGfAdA3Hf+uTgTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

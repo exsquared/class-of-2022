@@ -2,6 +2,6 @@
 {
     public interface IUserCredentialsCheck
     {
-        bool ValidateCredentials(string username, string password);
+        bool IsValidCredentials(string username, string password);
     }
 }

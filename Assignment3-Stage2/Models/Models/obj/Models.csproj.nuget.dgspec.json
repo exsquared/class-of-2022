@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj": {}
+    "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj": {
+    "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\obj\\",
+        "outputPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

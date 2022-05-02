@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Services\\Services\\Services.csproj": {}
+    "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Services\\Services\\Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj": {
+    "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj",
         "projectName": "ConstantsLibrary",
-        "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj",
+        "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj",
         "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\ConstantsLibrary\\ConstantsLibrary\\obj\\",
+        "outputPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\ConstantsLibrary\\ConstantsLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,6 +39,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -58,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj": {
+    "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\obj\\",
+        "outputPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -93,6 +99,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -112,14 +124,14 @@
         }
       }
     },
-    "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Repositories\\Repositories\\Repositories.csproj": {
+    "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Repositories\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Repositories\\Repositories\\Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Repositories\\Repositories\\Repositories.csproj",
         "projectName": "Repositories",
-        "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Repositories\\Repositories\\Repositories.csproj",
+        "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Repositories\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Repositories\\Repositories\\obj\\",
+        "outputPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Repositories\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -136,11 +148,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj": {
-                "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj"
+              "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj": {
+                "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj"
               },
-              "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj": {
-                "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj"
+              "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj": {
+                "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj"
               }
             }
           }
@@ -155,6 +167,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
@@ -183,14 +199,14 @@
         }
       }
     },
-    "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Services\\Services\\Services.csproj": {
+    "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Services\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Services\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Services\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Services\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Services\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Services\\Services\\obj\\",
+        "outputPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Services\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -207,11 +223,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj"
+              "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj"
               },
-              "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Repositories\\Repositories\\Repositories.csproj": {
-                "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Repositories\\Repositories\\Repositories.csproj"
+              "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Repositories\\Repositories\\Repositories.csproj": {
+                "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Repositories\\Repositories\\Repositories.csproj"
               }
             }
           }
@@ -225,6 +241,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -244,14 +266,14 @@
         }
       }
     },
-    "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj": {
+    "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj",
         "projectName": "UtilityLibrary",
-        "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj",
+        "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\UtilityLibrary\\UtilityLibrary\\UtilityLibrary.csproj",
         "packagesPath": "C:\\Users\\lsingh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\UtilityLibrary\\UtilityLibrary\\obj\\",
+        "outputPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\UtilityLibrary\\UtilityLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lsingh\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -268,8 +290,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\lsingh\\source\\repos\\WebAPIApplication4\\Models\\Models\\Models.csproj"
+              "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\Models\\Models\\Models.csproj"
               }
             }
           }
@@ -283,6 +305,12 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -20,7 +20,8 @@ namespace WebAPIApplication4.Services
             }
             return _repo.ReturnCSVFileData()
                 .Skip(pageSize * (pageNo - 1))
-                .Take(pageSize);            
+                .Take(pageSize)
+                .ToList();            
         }
 
         public IEnumerable<UsedBikeDetailsModel> CheapestBikeByBrandServiceFunc(string brandName)
@@ -29,14 +30,16 @@ namespace WebAPIApplication4.Services
             return _repo.ReturnCSVFileData()
                   .Where(bike => bike.Brand == brandName)
                   .OrderBy(bike => bike.Price)
-                  .Take(1);
+                  .Take(1)
+                  .ToList();
         }
 
         public IEnumerable<string> AllCityNamesServiceFunc()
         {
             return _repo.ReturnCSVFileData()
                 .Select(bike => bike.City)
-                .Distinct();
+                .Distinct()
+                .ToList();
         }
 
         public async Task<string> GetCoordinatesOfCityServiceFuncAsync(string city)
