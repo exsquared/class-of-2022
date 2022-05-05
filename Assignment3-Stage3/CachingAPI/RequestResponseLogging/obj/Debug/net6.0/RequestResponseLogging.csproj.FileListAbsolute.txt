@@ -1,0 +1,12 @@
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\bin\Debug\net6.0\RequestResponseLogging.deps.json
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\bin\Debug\net6.0\RequestResponseLogging.dll
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\bin\Debug\net6.0\RequestResponseLogging.pdb
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\RequestResponseLogging.csproj.AssemblyReference.cache
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\RequestResponseLogging.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\RequestResponseLogging.AssemblyInfoInputs.cache
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\RequestResponseLogging.AssemblyInfo.cs
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\RequestResponseLogging.csproj.CoreCompileInputs.cache
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\RequestResponseLogging.dll
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\refint\RequestResponseLogging.dll
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\RequestResponseLogging.pdb
+C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\RequestResponseLogging\obj\Debug\net6.0\ref\RequestResponseLogging.dll

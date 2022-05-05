@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "JnMO9CYH4ycv1yQImJphRdkUAhIY5ISJQBddv0/m2QdBuQFh9j0vO6WTfeZ+nSILUssZv+1VrfSueoQLrWAgGQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\lsingh\\Desktop\\CachingAPI1\\ConstantsLibrary\\ConstantsLibrary\\ConstantsLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\lsingh\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,20 @@
+2022-05-04T16:00:20.0982320+05:30 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7092"
+2022-05-04T16:00:20.1202555+05:30 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5092"
+2022-05-04T16:00:20.1219355+05:30 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2022-05-04T16:00:20.1220198+05:30 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2022-05-04T16:00:20.1221488+05:30 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\CachingAPI\"
+2022-05-04T16:00:37.2526812+05:30 [DBG] (CachingAPI.BasicAuthenticationHandler) AuthenticationScheme: "BasicAuthentication" was successfully authenticated.
+2022-05-04T16:00:37.4864385+05:30 [ERR] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/GetUsedBikeDetails/cheapestbikebybrand" responded 700 in 246.6412 ms
+2022-05-04T16:02:17.1114860+05:30 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7092"
+2022-05-04T16:02:17.1632718+05:30 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5092"
+2022-05-04T16:02:17.1680092+05:30 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2022-05-04T16:02:17.1682091+05:30 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2022-05-04T16:02:17.1682783+05:30 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\CachingAPI\"
+2022-05-04T16:03:24.3955767+05:30 [ERR] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/GetUsedBikeDetails/cheapestbikebybrand" responded 700 in 246.7440 ms
+2022-05-04T16:06:08.4369965+05:30 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "https://localhost:7092"
+2022-05-04T16:06:08.4637101+05:30 [INF] (Microsoft.Hosting.Lifetime) Now listening on: "http://localhost:5092"
+2022-05-04T16:06:08.4659208+05:30 [INF] (Microsoft.Hosting.Lifetime) Application started. Press Ctrl+C to shut down.
+2022-05-04T16:06:08.4660419+05:30 [INF] (Microsoft.Hosting.Lifetime) Hosting environment: "Development"
+2022-05-04T16:06:08.4660835+05:30 [INF] (Microsoft.Hosting.Lifetime) Content root path: "C:\Users\lsingh\Desktop\CachingAPI1\CachingAPI\CachingAPI\"
+2022-05-04T16:06:30.4062579+05:30 [ERR] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/GetUsedBikeDetails/cheapestbikebybrand" responded 700 in 217.7570 ms
+2022-05-04T16:21:57.9678369+05:30 [ERR] (Serilog.AspNetCore.RequestLoggingMiddleware) HTTP "GET" "/api/GetUsedBikeDetails/cheapestbikebybrand" responded 700 in 245.6816 ms
