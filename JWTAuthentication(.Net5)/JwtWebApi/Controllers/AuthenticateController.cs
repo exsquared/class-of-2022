@@ -15,16 +15,13 @@ namespace JwtWebApi.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly JwtTokenConfig _jwtTokenConfig;
-        //private readonly IEnumerable<Claim> authClaims;
 
         public AuthenticateController(IConfiguration configuration)
         {
             _configuration = configuration;
-            //_jwtTokenConfig = optionMonitor.CurrentValue;
         }
 
         [HttpPost("{userName}/{password}")]
-
         public IActionResult Login(string userName, string password)
         {
             var user = UtilityLibrary.Utility.Authenticate(userName, password);

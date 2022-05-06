@@ -5,7 +5,6 @@ C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\JwtWebApi.deps
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\JwtWebApi.runtimeconfig.json
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\JwtWebApi.runtimeconfig.dev.json
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\JwtWebApi.dll
-C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\ref\JwtWebApi.dll
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\JwtWebApi.pdb
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
@@ -33,6 +32,7 @@ C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\Microsoft.Iden
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\lsingh\source\repos\JwtWebApi\JwtWebApi\obj\Debug\net5.0\refint\JwtWebApi.dll
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\appsettings.json
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\JwtWebApi.exe
@@ -40,7 +40,6 @@ C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\b
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\JwtWebApi.runtimeconfig.json
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\JwtWebApi.runtimeconfig.dev.json
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\JwtWebApi.dll
-C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\ref\JwtWebApi.dll
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\JwtWebApi.pdb
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -65,6 +64,7 @@ C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\o
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\obj\Debug\net5.0\JwtWebApi.RazorTargetAssemblyInfo.cache
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\obj\Debug\net5.0\JwtWebApi.csproj.CopyComplete
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\obj\Debug\net5.0\JwtWebApi.dll
-C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\obj\Debug\net5.0\ref\JwtWebApi.dll
+C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\obj\Debug\net5.0\refint\JwtWebApi.dll
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\obj\Debug\net5.0\JwtWebApi.pdb
 C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\obj\Debug\net5.0\JwtWebApi.genruntimeconfig.cache
+C:\Users\lsingh\Desktop\Clone\class-of-2022\JWTAuthentication(.Net5)\JwtWebApi\obj\Debug\net5.0\ref\JwtWebApi.dll

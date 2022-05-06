@@ -9,37 +9,30 @@ using JwtWebApi.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using System;
 
 namespace JwtWebApi
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-        public object ValidAudience { get; private set; }
-
-        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<JwtTokenConfig>(Configuration.GetSection("JwtTokenConfig"));
             services.AddControllers();
             services.AddScoped<IGetBikeData, GetBikeData>();
             services.AddScoped<IGetBikeDataService, GetBikeDataService>();
             services.AddSwaggerGen(swagger =>
             {
-                //This is to generate the Default UI of Swagger Documentation
                 swagger.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
                     Title = "ASP.NET 5 Web API",
                     Description = "Authentication and Authorization in ASP.NET 5 with JWT and Swagger"
                 });
-                // To Enable authorization using Swagger (JWT)
                 swagger.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
                 {
                     Name = "Authorization",
@@ -66,9 +59,6 @@ namespace JwtWebApi
                 });
             });
 
-            var jwtTokenConfig = Configuration.GetSection("jwtTokenConfig").Get<JwtTokenConfig>();
-            services.AddSingleton(jwtTokenConfig);
-
             services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -77,8 +67,7 @@ namespace JwtWebApi
             })
            .AddJwtBearer(x =>
            {
-            //    x.RequireHttpsMetadata = true;
-                x.SaveToken = true;
+               x.SaveToken = true;
                x.TokenValidationParameters = new TokenValidationParameters
                {
                    ValidateIssuer = false,
@@ -88,13 +77,10 @@ namespace JwtWebApi
                    ValidAudience = Configuration["JwtTokenConfig:Audience"],
                    ValidateAudience = false,
                    ValidateLifetime = true,
-                   //RequireExpirationTime = false
-                   //        ClockSkew = TimeSpan.FromMinutes(1)
                };
            });
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())

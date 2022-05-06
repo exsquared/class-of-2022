@@ -27,7 +27,6 @@ namespace JwtWebApi.Controllers
 
         [HttpGet]
         [Route("cheapestbikebybrand")]
-
         public IEnumerable<BikeDetailModel> CheapestBikeByBrandControllerFunc(string brandName)
         {
             return _service.CheapestBikeByBrandServiceFunc(brandName);
